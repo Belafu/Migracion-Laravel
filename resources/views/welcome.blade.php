@@ -8,12 +8,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/footer.css">
         <!-- Styles -->
-        <style>
+         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
@@ -58,6 +60,7 @@
                 margin-bottom: 30px;
             }
         </style>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -80,18 +83,48 @@
                     Laravel
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
         </div>
 
         @yield('content')
+
+        <footer>
+          <div class="social">
+            <div class="text-social">
+                <p>Siguenos en</p>
+            </div>
+            <div class="iconosSociales">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="fab fa-facebook-f"></span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span class="fab fa-twitter"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fab fa-google-plus-g"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fab fa-linkedin-in"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fab fa-instagram"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="copyright">  Copyright  &copy; Todos los Derechos Reservados <p>
+          </div>
+        </footer>
     </body>
 </html>
