@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/product-add', 'ProductController@create');
 Route::post('/product-add', 'ProductController@store');

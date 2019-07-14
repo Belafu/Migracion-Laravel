@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name', 100);
             $table->string('description', 300);
             $table->decimal('price', 10, 2);
-            $table->bigInteger('user_id')->unsigned();//Deben coinsidir en:
+            $table->bigInteger('user_id')->unsigned()->nullable();//Deben coinsidir en:
             //1. Data type (ambos deben ser bigInteger (bigIncrements es por detrás bigInteger. Revisen la documentación para bigIncrements.))
             //2. Collation: por default son iguales.
             //3. La definición de signo: por default Laravel define que bigIncrements es de tipo unsigned por lo tanto hay que aclararlo también en este campo.

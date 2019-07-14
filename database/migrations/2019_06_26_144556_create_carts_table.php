@@ -20,12 +20,12 @@ class CreateCartsTable extends Migration
             $table->decimal('price', 10, 2);
             $table->string('featured_img', 300);
             $table->integer('cant');
-            $table->bigInteger('user_id')->unsigned();//Deben coinsidir en:
+            $table->bigInteger('user_id')->unsigned()->nullable();//Deben coinsidir en:
             //1. Data type (ambos deben ser bigInteger (bigIncrements es por detrás bigInteger. Revisen la documentación para bigIncrements.))
             //2. Collation: por default son iguales.
             //3. La definición de signo: por default Laravel define que bigIncrements es de tipo unsigned por lo tanto hay que aclararlo también en este campo.
             $table->smallInteger('status')->default(0);
-            $table->bigInteger('cart_number');
+            $table->bigInteger('cart_number')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
