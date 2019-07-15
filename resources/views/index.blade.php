@@ -3,26 +3,26 @@
 @section('content')
     <div class="container">
       <section "carro">
-       <h1>NOVEDADES //</h1>
+       <h1>NOVEDADES </h1>
        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
- <ol class="carousel-indicators">
-   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
- </ol>
+         <ol class="carousel-indicators">
+           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         </ol>
  <div class="carousel-inner">
    <div class="carousel-item active">
      <a href="productos.php">
-       <img class="imagen-carro w-50" src="img/mouse2.png" alt="First slide">
+       <img class="imagen-carro w-50" src="images/productos/mouse2.png" alt="First slide">
      </a>
    </div>
    <div class="carousel-item">
      <a href="productos.php">
-     <img class="imagen-carro w-50" src="img/teclado3.png" alt="Second slide">
+     <img class="imagen-carro w-50" src="images/productos/teclado3.png" alt="Second slide">
      </a>
    </div>
    <div class="carousel-item">
-     <img class="imagen-carro w-50" src="img/auricular.png" alt="Third slide">
+     <img class="imagen-carro w-50" src="images/productos/auricular.png" alt="Third slide">
    </div>
  </div>
  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -40,17 +40,17 @@
     <div class="container">
         <article class="informacion">
         <div class="info-seguridad">
-          <img class="seguridad" src="img/seguridad.png" alt="" width="130px" height="130px">
+          <img class="seguridad" src="images/productos/seguridad.png" alt="" width="130px" height="130px">
           <div class="data-seguridad">
           </div>
         </div>
         <div class="info-seguridad">
-          <img class="seguridad" src="img/tarjeta.png" alt="" width="130px" height="130px">
+          <img class="seguridad" src="images/productos/tarjeta.png" alt="" width="130px" height="130px">
           <div class="data-seguridad">
           </div>
         </div>
         <div class="info-seguridad">
-          <img class="seguridad" src="img/camion.png" alt="" width="130px" height="130px">
+          <img class="seguridad" src="images/productos/camion.png" alt="" width="130px" height="130px">
           <div class="data-seguridad">
           </div>
         </div>
@@ -62,21 +62,21 @@
       <section class="product-container">
         <article class="product-logo">
           <a href="productos.php">
-            <img class="product-img-ofertas img-fluid" src="img/mouse3.png" alt="" width="325px" height="300px">
+            <img class="product-img-ofertas img-fluid" src="images/productos/mouse3.png" alt="" width="325px" height="300px">
           </a>
-          <img class="promo img-fluid"src="img/descuento.png" alt="" width="100px" height="50px">
+          <img class="promo img-fluid"src="images/productos/descuento.png" alt="" width="100px" height="50px">
         </article>
         <article class="product-logo">
           <a href="productos.php">
-            <img class="product-img-ofertas img-fluid" src="img/teclado.png" alt="" width="325px" height="300px">
+            <img class="product-img-ofertas img-fluid" src="images/productos/teclado.png" alt="" width="325px" height="300px">
           </a>
-          <img class="oferta img-fluid"src="img/oferta.png" alt="" width="140px" height="110px">
+          <img class="oferta img-fluid"src="images/productos/oferta.png" alt="" width="140px" height="110px">
         </article>
         <article class="product-logo">
           <a href="productos.php">
-            <img class="product-img-ofertas img-fluid" src="img/auricular2.png" alt="" width="325px" height="300px">
+            <img class="product-img-ofertas img-fluid" src="images/productos/auricular2.png" alt="" width="325px" height="300px">
           </a>
-          <img class="ofertita img-fluid"src="img/ofertita.png" alt="" width="80px" height="40px">
+          <img class="ofertita img-fluid"src="images/productos/ofertita.png" alt="" width="80px" height="40px">
         </article>
     </div>
 
@@ -84,7 +84,7 @@
       <h1 class="ofertasdelmes">INGRESOS //</h1>
       <section class="info">
         <div class="card">
-        <img class="product-img img-fluid" src="img/mouse.png" alt="" width="350px" height="200px">
+        <img class="product-img img-fluid" src="images/productos/mouse.png" alt="" width="350px" height="200px">
         <div class="card-body">
           <h5 class="card-title">Mouse Gamer</h5>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -92,7 +92,7 @@
           </div>
           </div>
           <div class="card">
-          <img class="product-img img-fluid" src="img/auricular3.png" alt="" width="350px" height="200px">
+          <img class="product-img img-fluid" src="images/productos/auricular3.png" alt="" width="350px" height="200px">
           <div class="card-body">
             <h5 class="card-title">Auricular Gamer</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -100,7 +100,7 @@
             </div>
             </div>
             <div class="card">
-            <img class="product-img img-fluid" src="img/teclado2.png" alt="" width="350px" height="200px">
+            <img class="product-img img-fluid" src="images/productos/teclado2.png" alt="" width="350px" height="200px">
             <div class="card-body">
               <h5 class="card-title">Teclado Gamer</h5>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
