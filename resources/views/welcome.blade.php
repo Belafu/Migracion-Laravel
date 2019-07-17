@@ -37,10 +37,11 @@
                   @endif
               @endauth
           @endif
-          <a href="productos.php">Productos</a>
+          <a href="/products">Productos</a><!--estaba productos.php-->
           <a href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
         </ul>
       </header>
+
       @if (Route::has('login'))
           @auth
       <ul class="navbar-nav ml-auto">
