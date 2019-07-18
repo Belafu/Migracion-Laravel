@@ -38,7 +38,7 @@
               @endauth
           @endif
           <a href="/products">Productos</a><!--estaba productos.php-->
-          <a href="carrito.php"><i class="fas fa-shopping-cart"></i></a>
+          <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
         </ul>
       </header>
 

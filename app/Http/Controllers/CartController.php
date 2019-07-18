@@ -36,6 +36,7 @@ class CartController extends Controller
      */
     public function store($id)
     {
+      //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
         $product = Product::find($id);
 
         $user = 1; //traer usuario que esta comprando.
