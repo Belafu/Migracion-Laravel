@@ -27,6 +27,7 @@ class CreateCartsTable extends Migration
             $table->smallInteger('status')->default(0);
             $table->bigInteger('cart_number')->nullable();
             $table->timestamps();
+            //este campo marca como borrado en la base de datos sin borrarlo de la bd como etiquetarlo
             $table->softDeletes();
 
             $table->foreign('user_id')

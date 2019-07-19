@@ -7,7 +7,7 @@
 6. Revisar la información de conexión a la db. Son las posicones `DB_ `.
 7. Tener Creada una base de datos llamada darkcode desde MySQL.
 8. Correr las migraciones: `php artisan migrate`.
-9. Crear las carpetas products y profiles en storage/app/public/
+9. Crear las carpetas `products` y `profiles` en storage/app/public/
 10. Correr el seeder: `php artisan db:seed`.
 11. Ejecutar `php artisan serve` para iniciar el servidor web.
 

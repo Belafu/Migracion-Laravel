@@ -21,12 +21,16 @@ Route::get('/products', 'ProductController@index');
 Route::get('/product/edit/{id}', 'ProductController@edit');
 Route::post('/product/edit/{id}', 'ProductController@update');
 
+//  /product/{id} dice que al metodo show del controlador le paso la variable id
 Route::get('/product/{id}', 'ProductController@show');
 Route::post('/product/{id}', 'ProductController@destroy');
 Route::get('/product/addtocart/{id}', 'CartController@store')->middleware('auth');
 
-Route::get('/cart', 'CartController@show');
+Route::get('/cart', 'CartController@show')->middleware('auth');
+Route::post('/cart/{id}', 'CartController@update');
+Route::delete('/cart/{id}', 'CartController@destroy');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/resumen', 'CartController@comprar');
