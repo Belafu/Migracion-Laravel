@@ -1,0 +1,32 @@
+.lista-productos{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.tags{
+  width: 150px;
+}
+.productos{
+  width: 85%;
+}
+/*los hijos de productos son .vista-producto */
+.vista-producto{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+/*los hijos de las vistas por productos*/
+.caja-imagen{
+  width: 300px;
+  height: 300px;
+}
+.propia-imagen{
+  width: 100%;
+}
+/*informacion-producto*/
+.informacion-producto{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}

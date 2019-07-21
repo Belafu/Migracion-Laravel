@@ -19,6 +19,14 @@
   <p>
     <input type="file" name="featured_img" value="">
   </p>
+  <select class="" name="tag">
+    @foreach ($tags as $key)
+    <option value="{{$key->id}}">{{$key->name}}</option>
+    @endforeach
+  </select>
+
+<!--Agregar el tag  con un foreach recorrido-->
+
   <button type="submit">Enviar</button>
   {{-- <button type="reset">Limpiar</button> --}}
 </form>

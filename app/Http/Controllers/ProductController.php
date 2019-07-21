@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Tag;
+use App\Product_tag;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -18,7 +20,8 @@ class ProductController extends Controller
     /*Muestra el formulario para crear un nuevo recurso.*/
     public function create()
     {
-        return view('productAdd');
+        $tags = Tag::all();
+        return view('productAdd',compact('tags'));
     }
 
     /* Almacenar un recurso recién creado en el almacenamiento*/
@@ -35,7 +38,6 @@ class ProductController extends Controller
 
         $path = $request->file('featured_img')->store('public/products');
         $file = basename($path);
-        // dd($path, $file);
 
         $product = new Product;
         $product->name = $request->name;
@@ -44,6 +46,12 @@ class ProductController extends Controller
         $product->featured_img = $file;
 
         $product->save();
+
+        $product_tag = new Product_tag;
+        $product_tag->tag_id = $request->tag;
+        $product_tag->product_id = $product->id;
+        
+        $product_tag->save();
 
         return redirect('/products');
 
