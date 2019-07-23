@@ -3,14 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes; //Para softdeletes
 class Product extends Model
 {
 
     // public $table = "Products";
     public $guarded = [];
     // public $timestamps = false;
-
+    use softDeletes;
     public function users(){
       return $this->belongsTo('\App\User', 'user_id');
     }

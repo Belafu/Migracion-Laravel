@@ -50,7 +50,7 @@ class ProductController extends Controller
         $product_tag = new Product_tag;
         $product_tag->tag_id = $request->tag;
         $product_tag->product_id = $product->id;
-        
+
         $product_tag->save();
 
         return redirect('/products');
@@ -102,12 +102,8 @@ class ProductController extends Controller
         $file = basename($path);
         $product->featured_img = $file;
       }
-
       $product->save();
-
       return redirect('/products');
-
-
     }
 
     /**
@@ -123,6 +119,11 @@ class ProductController extends Controller
 
         return redirect('/products');
     }
-
+    public function filtros(){
+      //son los productos filtrados |pero me conviene el nombre para recorrerlo
+      $products = Product::where('price','>',$_GET['min'])->where('price','<',$_GET['max'])->get();
+      //dd($products);
+      return view('products', compact('products'));
+    }
 
 }

@@ -34,3 +34,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resumen', 'CartController@comprar');
+Route::get('/productosFiltrados', 'ProductController@filtros');

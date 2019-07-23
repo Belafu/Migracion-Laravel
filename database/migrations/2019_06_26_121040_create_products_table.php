@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             //$table->bigInteger('user_id')->unsigned()->nullable();
 
             $table->string('featured_img', 300);
+            $table->softDeletes();
             $table->timestamps();
 
             //$table->foreign('user_id')->references('id')->on('users');
