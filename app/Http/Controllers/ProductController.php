@@ -14,7 +14,8 @@ class ProductController extends Controller
     {
         //Mostrar todos los productos.
         $products = Product::all();
-        return view('products', compact('products'));
+        $tags = Tag::all();
+        return view('products', compact('products','tags'));
     }
 
     /*Muestra el formulario para crear un nuevo recurso.*/
@@ -120,10 +121,21 @@ class ProductController extends Controller
         return redirect('/products');
     }
     public function filtros(){
+      $tags = Tag::all();
       //son los productos filtrados |pero me conviene el nombre para recorrerlo
-      $products = Product::where('price','>',$_GET['min'])->where('price','<',$_GET['max'])->get();
-      //dd($products);
-      return view('products', compact('products'));
+      if (isset($_GET['min']) && isset($_GET['max'])) {
+        $products = Product::where('price','>',$_GET['min'])->where('price','<',$_GET['max'])->get();
+      //  return view('products', compact('products'));
+      }
+      if (isset($_GET['tag'])) {
+        $productsXTag =  Product_tag::where('tag_id','=',$_GET['tag'])->get();
+        //dd($productsXTag);
+        $products = $productsXTag->map(function($elem){
+          return Product::find($elem->product_id);
+        });
+        //dd($product);
+      }
+      return view('products', compact('products','tags'));
     }
 
 }

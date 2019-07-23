@@ -36,8 +36,22 @@
 
         <a class="btn btn-outline-secondary" href="/products">Limpiar</a>
     </div>
-
+    <div class="filtro-tag">
+      <p>Tags</p>
+      @foreach ($tags as $tag)
+        @if (isset($_GET['tag']))
+          @if ($_GET['tag']==$tag->id)
+            <button type="button" class="btn btn-primary"> </button> {{$tag->name}} <br>
+          @else
+            <a class="btn btn-outline-info" href="/productosFiltrados?tag={{$tag->id}}"> </a> {{$tag->name}} <br>
+          @endif
+        @else
+          <a class="btn btn-outline-info" href="/productosFiltrados?tag={{$tag->id}}"> </a> {{$tag->name}} <br>
+        @endif
+      @endforeach
+    </div>
   </div>
+
   <div class="productos">
     @forelse ($products as $product)
         <article class="vista-producto">
