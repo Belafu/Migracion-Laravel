@@ -21,6 +21,8 @@ La relacion es de `muchos a muchos` por lo tanto vamos a necesitar 2 tablas más
 5. Crear las `factory` para tags.
 6. Refactorizar el seeder para que actulice la tabla pivot con datos de las tablas `products` y `tags`.
 
+## Chekeando permisos.
+1. Franco : Funcionan mis permisos.
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
