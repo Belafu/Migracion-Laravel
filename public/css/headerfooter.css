@@ -3,7 +3,7 @@
 box-sizing: border-box;
 margin: 0;
 padding: 0;
-font-family: "montserrat",sans-serif;
+font-family: "play",sans-serif;
 }
 ul,ol{
   padding: 0;
@@ -20,108 +20,66 @@ a{
 
 
 /*-------HEADER-----------*/
-header{
-  height: 90px;
-  background-color: #adb5bd;
-  padding: 0 20px;
-  color: black;
-  margin-bottom: 10px
-}
 
-.logo{
-  line-height: 100px;
-  float: left;
-  text-transform: uppercase;
+
+.nav-bar{
+  display: flex;
+  justify-content: center;
+  height: 140px;
+  background-image: url('/images/fondometal.jpg');
+}
+.darkcode{
+  font-family: 'Atomic Age', cursive;
+  font-size: 80px;
+  margin-top: 10px;
+  color: white;
+}
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+
+}
+.item{
+  margin-left: 20px;
+font-weight: bold;
+  margin-top: 10px;
+  font-size: 25px;
+}
+.contenedorMenu{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.items{
+  display: flex;
+}
+.registerylogin{
+  display:flex;
+  margin-right: 10px;
+}
+.busqueda{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.buscador{
+width: 200px;
+height: 36px;
+margin-top: 1px
+}
+.boton-buscar{
+  margin-left: 3px
 }
 .nombre-header{
-    text-transform: uppercase;
-    margin: 0 10px 0 0;
-}
-.avatar{
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px 0 0;
-}
-
-.menu-header{
-  float: right;
-  line-height: 100px;
-}
-.menu-header a{
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0 10px;
-  transition: 0.4s;
-}
-.show-menu-btn,.hide-menu-btn{
-  transition: 0.4s;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;  /*ESto me dice que no esta en version movil*/
-}
-.show-menu-btn{
-  float: right;
-}
-.show-menu-btn i{
-  line-height: 100px;
-}
-.menu-header a:hover,
-.show-menu-btn:hover,
-.hide-menu-btn:hover{
-  color: #3498db;
-}
-
-#chk{
-  position: absolute;
-  visibility: hidden;
-  z-index: -1111;
-}
-.btn-color{
-  background-color: deeppink;
-  border-color: deeppink;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 20px
 }
 
 
-@media screen and (max-width:800px) {
 
-  .show-menu-btn,.hide-menu-btn{
-    display: block;
-  }
-  .menu-header{
-    z-index: 100;/*esta es la line aque arreglo todo*/
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #333;
-    right: -100%;
-    top: 0;
-    text-align: center;
-    padding: 80px 0;
-    line-height: normal;
-    transition: 0.7s;
-  }
-  .menu-header a, .nombre-header{
-    display: block;
-    padding: 20px;
-  }
-  .hide-menu-btn{
-    position: absolute;
-    top: 40px;
-    right: 40px;
-  }
-  #chk:checked ~ .menu-header{
-    right: 0;
-  }
-  .avatar{
-    width: 100px;
-    height: 100px;
-    margin: 0;
-  }
-
-
-}
 
 /*-------FOOTER-----------*/
 /*reset generales: Estan al principio*/
@@ -239,4 +197,49 @@ transform: rotateX(0deg) translateY(0);
 }
 .copyright{
   margin-top: 20px;
+}
+.nav-mobile{
+  display: none;
+}
+.bar-mobile{
+  display: none;
+}
+
+@media screen and (max-width:991px){
+  .nav-bar{
+    display: none;
+  }
+  .contenedorMenu{
+    display: none;
+  }
+  .bar-mobile{
+    background-image: url('/images/fondometal.jpg');
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .item{
+    color: white;
+  }
+  .darkcode-mobile{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .nav-mobile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px
+  }
+  .nombre-header{
+    display: none;
+  }
+  .nombre-header-mobile{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
 }

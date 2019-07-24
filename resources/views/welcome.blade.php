@@ -8,6 +8,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Atomic+Age&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/headerfooter.css">
@@ -17,31 +19,73 @@
 
     </head>
     <body>
-      <header>
-        <a href="/"><h2 class="logo">DarkCode</h2></a>
-        <input type="checkbox" id="chk">
-        <label for="chk" class="show-menu-btn">
-          <i class="fas fa-ellipsis-h"></i>
-        </label>
-        <ul class="menu-header">
-          <label for="chk" class="hide-menu-btn">
-            <i class="fas fa-times"></i>
-          </label>
+      <div class="nav-bar">
+          <a class="darkcode" href="index.php">DARKCODE</a>
+      </div>
+
+      <div class="contenedorMenu">
+        <div class="busqueda">
+          <input class="buscador" type="text" name="" value="" placeholder="Buscar productos..."><button type="button" class="btn btn-dark boton-buscar">Buscar</button>
+        </div>
+
+
+
+
           @if (Route::has('login'))
-              @auth
-              <a href="{{ url('/home') }}">Home</a>
-              <a href="/editarPerfil"><span class="nombre-header btn btn-color">{{ Auth::user()->name }}</span></a>
+            @auth
+              <div class="item-centrados">
+                <ul class="items">
+
+                <li><a class="item" href="">PRODUCTOS</a></li>
+
+                </ul>
+              </div>
+
+  <li><a class="item" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+          <a href="/editarPerfil"><span class="nombre-header btn btn-color">Bienvenido {{ Auth::user()->name }}!</span></a>
+
           @else
-              <a href="{{ route('login') }}">Login</a>
-                  @if (Route::has('register'))
-                          <a href="{{ route('register') }}">Register</a>
-                  @endif
+
+            <div class="">
+              <ul class="registerylogin">
+                <li><a class="item" href="{{ route('login') }}">LOGIN</a></li>
+                @if (Route::has('register'))
+                      <li><a class="item" href="{{ route('register') }}">REGISTRO</a></li>
+                @endif
               @endauth
-          @endif
-          <a href="/products">Productos</a><!--estaba productos.php-->
-          <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
-        </ul>
-      </header>
+              @endif
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <div class="bar-mobile">
+          <a class="darkcode-mobile" href="index.php">DARKCODE</a>
+      </div>
+
+
+        @if (Route::has('login'))
+                     @auth
+                       <div class="nav-mobile">
+                       <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
+                       <li><a class="" href="#"><i class="fas fa-box-open item-mobile" ></i></a></li>
+                       <li><a class="" href="#"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
+                     <a href="/editarPerfil"><span class="nombre-header-mobile btn btn-color">Bienvenido {{ Auth::user()->name
+                     }}!</span></a>
+                 @else
+                   <a href="{{ route('login') }}">Login</a>
+                       @if (Route::has('register'))
+                               <a href="{{ route('register') }}">Register</a>
+                       @endif
+                   @endauth
+               @endif
+
+      </div>
+
 
         @yield('content')
       <footer>

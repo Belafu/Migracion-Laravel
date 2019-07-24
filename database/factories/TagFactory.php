@@ -6,7 +6,11 @@ use App\Tag;
 use Faker\Generator as Faker;
 
 $factory->define(Tag::class, function (Faker $faker) {
+  $categorias=["mouses" , "teclados" , "auriculares"];
+  
+
     return [
-        'name'=>$faker->word,
+        'name'=>$categorias[0],
     ];
+
 });
