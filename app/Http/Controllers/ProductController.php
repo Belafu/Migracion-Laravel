@@ -120,21 +120,29 @@ class ProductController extends Controller
 
         return redirect('/products');
     }
-    public function filtros(){
+    public function filtros(Request $request){
       $tags = Tag::all();
       //son los productos filtrados |pero me conviene el nombre para recorrerlo
-      if (isset($_GET['min']) && isset($_GET['max'])) {
-        $products = Product::where('price','>',$_GET['min'])->where('price','<',$_GET['max'])->get();
-      //  return view('products', compact('products'));
-      }
-      if (isset($_GET['tag'])) {
-        $productsXTag =  Product_tag::where('tag_id','=',$_GET['tag'])->get();
-        //dd($productsXTag);
-        $products = $productsXTag->map(function($elem){
-          return Product::find($elem->product_id);
+      $products = Product::all();
+      $cota = 2000;
+      if (isset($request->price) ) {
+        $products = $products->filter(function($value){
+          return ($value->price) > $cota ;
         });
-        //dd($product);
       }
+
+      /*if (isset($request['tag'])) {
+        $productsConTag =  Product_tag::where('tag_id','=',$request['tag'])->get();
+        $idsProductosDeEseTag = $productsConTag->map(function($value){
+          return $value->product_id ;
+        });
+        if (!$idsProductosDeEseTag) {//SI el array no esta vacio
+          $products = $products->filter(function($value){
+            return  $idsProductosDeEseTag->contains($value->id);
+          });
+        }
+            //dd($product);
+      }*/
       return view('products', compact('products','tags'));
     }
 
