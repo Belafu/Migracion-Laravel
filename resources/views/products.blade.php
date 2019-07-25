@@ -39,8 +39,10 @@
               <img class="propia-imagen" src="/storage/products/{{$product->featured_img}}" alt="">
           </div>
           <div class="informacion-producto">
-            <p>Nombre: {{$product->name}}</p>
-            <p>Descripción: {{$product->description}}</p>
+            <div class="nombre-descripcion">
+              <p>Nombre: {{$product->name}}</p>
+              <p>Descripción: {{$product->description}}</p>
+            </div>          
             <div class="botom-precio">
               <div class="precio">Precio: {{$product->price}}</div>
                 <div class="botones-producto">
