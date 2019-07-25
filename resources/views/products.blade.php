@@ -41,16 +41,17 @@
           <div class="informacion-producto">
             <p>Nombre: {{$product->name}}</p>
             <p>Descripción: {{$product->description}}</p>
-            <p>Precio: {{$product->price}}</p>
-              <div class="botones-producto">
-                @if ($carritoActual->contains($product->name))
-                  <p>Ya lo tienes en el carrito</p>
-                @else
-                  <a href="/product/{{$product->id}}">Ver más</a>
-                @endif
-
-                <a href="/product/edit/{{$product->id}}">Editar</a>
-              </div>
+            <div class="botom-precio">
+              <div class="precio">Precio: {{$product->price}}</div>
+                <div class="botones-producto">
+                  @if ($carritoActual->contains($product->name))
+                    <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
+                  @else
+                    <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
+                  @endif
+                  <a class="btn btn-outline-warning" href="/product/edit/{{$product->id}}">Editar</a>
+                </div>
+            </div>
           </div>
         </article>
     @empty

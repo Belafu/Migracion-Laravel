@@ -60,8 +60,17 @@ background-color: rgba(0, 0, 0, 0.12);
 padding: 10px;
 background-color: rgba(0, 0, 0, 0.12);
 }
-
-
+/*botones*/
+.botom-precio{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-outline-warning{
+  margin-left: 6px;
+}
 @media (min-width:720px) {
   .productos{
    display: flex;
