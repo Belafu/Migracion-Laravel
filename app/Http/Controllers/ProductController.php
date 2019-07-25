@@ -20,7 +20,7 @@ class ProductController extends Controller
         $tags = Tag::all();
         $carritoActual = Cart::where('status','=',0)->get();
         $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
-    
+
         return view('products', compact('products','tags','carritoActual'));
     }
 

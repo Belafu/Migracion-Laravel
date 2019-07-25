@@ -20,25 +20,27 @@ h1{
 }
 .novedades{
   margin-top: 30px;
-  width: 100%;
   background-image: url("images/brushed.png");
-  background-repeat: repeat;
-  display: inline-block;
-  overflow:hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
-
-
+}
+.imagen-x{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .texto-novedades{
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 30px;
   text-align: center;
+  font-weight: bold;
+  color: black
 }
 .novedad-uno{
 border: 2px solid grey;
+border-radius: 3%;
 
 }
 .mouse-novedad{
@@ -49,7 +51,35 @@ border: 2px solid grey;
   flex-direction: column;
   width: 25%;
 }
+.botones{
+  display: flex;
+  padding: 10px;
+  flex: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
 
 @media screen and (max-width:991px){
+  .novedades{
+    margin-top: 30px;
+    width: 100%;
+    background-image: url("images/brushed.png");
+    background-repeat: repeat;
+    display: inline-block;
+    overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .novedad-uno{
+    margin-top: 10px;
+  }
+  .novedad{
+    text-align: center;
+  }
+  .carros{
+    width: 100%;
 
+  }
 }

@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
 Route::get('/product-add', 'ProductController@create');
 Route::post('/product-add', 'ProductController@store');
 
@@ -30,7 +31,10 @@ Route::get('/cart', 'CartController@show')->middleware('auth');
 Route::post('/cart/{id}', 'CartController@update');
 Route::delete('/cart/{id}', 'CartController@destroy');
 
+Route::get('/product/search', 'HeaderController@search');
+
 Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resumen', 'CartController@comprar');

@@ -33,20 +33,30 @@
 <div class="novedad-uno">
   <div class="contenedor-producto">
     <img src="images/auriculargamer.jpeg" class="img-fluid" alt="Responsive image">
-    <h2 class="mouse-novedad">Auricular Gamer Razer </h2>
-    <button type="button" name="button">VER MAS</button>
+    <h2 class="novedad">Auricular Gamer Razer </h2>
+    <div class="botones">
+      <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+      <button class="btn btn-dark" type="button" name="button">Productos</button>
+    </div>
+
   </div>
 
 </div>
 <div class="novedad-uno">
-  <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
-  <h2 class="mouse-novedad">Mouse Gamer Razer </h2>
-  <button type="button" name="button">VER MAS</button>
+    <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
+  <h2 class="novedad">Mouse Gamer Razer </h2>
+  <div class="botones">
+      <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+      <button class="btn btn-dark" type="button" name="button">Productos</button>
+  </div>
 </div>
 <div class="novedad-uno">
-  <img src="images/tecladogamer.jpg" class="img-fluid" alt="Responsive image">
-  <h2 class="mouse-novedad">Teclado Gamer Razer </h2>
-  <button type="button" name="button">VER MAS</button>
+  <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
+  <h2 class="novedad">Teclado Gamer Razer </h2>
+  <div class="botones">
+    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button class="btn btn-dark" type="button" name="button">Productos</button>
+  </div>
 </div>
 </div>
 
@@ -54,21 +64,30 @@
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/auriculargamer.jpeg" class="img-fluid" alt="Responsive image">
-    <h2 class="mouse-novedad">Auricular Gamer Razer </h2>
-    <button type="button" name="button">VER MAS</button>
+    <img src="images/auriculargamer.jpeg" class="img-fluid imagen" alt="Responsive image">
+    <h2 class="novedad">Auricular Gamer Razer </h2>
+    <div class="botones">
+      <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+      <button class="btn btn-dark" type="button" name="button">Productos</button>
+    </div>
   </div>
 
 </div>
 <div class="novedad-uno">
-  <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
-  <h2 class="mouse-novedad">Mouse Gamer Razer </h2>
-  <button type="button" name="button">VER MAS</button>
+  <img class="imagen-x"src="images/mousegamer.jpeg" alt="Responsive image">
+  <h2 class="novedad">Mouse Gamer Razer </h2>
+  <div class="botones">
+    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button class="btn btn-dark" type="button" name="button">Productos</button>
+  </div>
 </div>
 <div class="novedad-uno">
-  <img src="images/tecladogamer.jpg" class="img-fluid" alt="Responsive image">
-  <h2 class="mouse-novedad">Teclado Gamer Razer </h2>
-  <button type="button" name="button">VER MAS</button>
+  <img src="images/mousegamer.jpeg" class="img-fluid imagen" alt="Responsive image">
+  <h2 class="novedad">Teclado Gamer Razer </h2>
+  <div class="botones">
+    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button class="btn btn-dark" type="button" name="button">Productos</button>
+  </div>
 </div>
 </div>
 

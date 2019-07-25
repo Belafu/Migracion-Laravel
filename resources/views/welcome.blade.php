@@ -24,10 +24,9 @@
       </div>
 
       <div class="contenedorMenu">
-        <div class="busqueda">
-          <input class="buscador" type="text" name="" value="" placeholder="Buscar productos..."><button type="button" class="btn btn-dark boton-buscar">Buscar</button>
-        </div>
-
+        <form class="busqueda" action="/products/search" method="get">
+          <input class="buscador" type="text" name="seach" value="" placeholder="Buscar productos..."><button type="button" class="btn btn-dark boton-buscar">Buscar</button>
+          </form>
 
 
 
@@ -41,16 +40,19 @@
                 </ul>
               </div>
 
-  <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
           <a href="/editarPerfil"><span class="nombre-header btn btn-color">Bienvenido {{ Auth::user()->name }}!</span></a>
 
           @else
+          <li><a class="item" href="/products">PRODUCTOS</a></li>
 
             <div class="">
               <ul class="registerylogin">
                 <li><a class="item" href="{{ route('login') }}">LOGIN</a></li>
                 @if (Route::has('register'))
                       <li><a class="item" href="{{ route('register') }}">REGISTRO</a></li>
+                      <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+
                 @endif
               @endauth
               @endif
@@ -58,7 +60,7 @@
               </ul>
             </div>
           </div>
-        </div>
+
 
 
 
@@ -74,15 +76,20 @@
                        <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
                        <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
                        <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
-                     <a href="/editarPerfil"><span class="nombre-header-mobile btn btn-color">Bienvenido {{ Auth::user()->name
-                     }}!</span></a>
+                       <li><a class="nombre-mobile" href="/editarPerfil">Bievenido {{ Auth::user()->name }}! </a></li>
                  @else
-                   <a href="{{ route('login') }}">Login</a>
-                       @if (Route::has('register'))
-                               <a href="{{ route('register') }}">Register</a>
-                       @endif
-                   @endauth
-               @endif
+                 <div class="nav-mobile">
+                   <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
+                   <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
+                   <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
+                   <li><a class="logyreg-mobile"href="{{ route('login')}}">Login</a></li>
+                      @if (Route::has('register'))
+                   <li><a class="logyreg-mobile"href="{{ route('register')}}">Registro</a></li>
+                      @endif
+                  @endauth
+                 @endif
+                 </div>
+
 
       </div>
 

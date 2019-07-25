@@ -78,13 +78,15 @@ margin-top: 1px
   font-size: 20px
 }
 
-
+.loginyregistromobile{
+  display: none
+}
 
 
 /*-------FOOTER-----------*/
 /*reset generales: Estan al principio*/
 footer{
-  background-color: #adb5bd;
+  background-image: url('/images/fondometal.jpg');
   /*display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -197,6 +199,7 @@ transform: rotateX(0deg) translateY(0);
 }
 .copyright{
   margin-top: 20px;
+  color: white;
 }
 .nav-mobile{
   display: none;
@@ -240,6 +243,13 @@ transform: rotateX(0deg) translateY(0);
     color: black;
     font-weight: bold;
     font-size: 20px;
+  }
+  .nombre-mobile{
+    font-weight: bold
+  }
+  .logyreg-mobile{
+    font-weight: bold;
+
   }
 
 }
