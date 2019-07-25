@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Cart;
 use App\Tag;
 use App\Product_tag;
 use Illuminate\Http\Request;
+//TOMA LO SAQUE DEL AUTH
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -15,7 +18,10 @@ class ProductController extends Controller
         //Mostrar todos los productos.
         $products = Product::all();
         $tags = Tag::all();
-        return view('products', compact('products','tags'));
+        $carritoActual = Cart::where('status','=',0)->get();
+        $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
+    
+        return view('products', compact('products','tags','carritoActual'));
     }
 
     /*Muestra el formulario para crear un nuevo recurso.*/

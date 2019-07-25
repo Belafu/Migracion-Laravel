@@ -115,12 +115,14 @@ class CartController extends Controller
     //campiarle a todos estos el estado a 1(comprado)
     $userLogueado =  Auth::user()->id;
     $cart_Usuario = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
+    $cartNumber = Cart::max('cart_number');
     foreach ( $cart_Usuario as $elem) {
+      $elem->cart_number = $cartNumber + 1;
       $elem->status =  1;
       $elem->save();
     }
 
-    //esta es mi solucion no se que pedo cuando 2 personas entren
+    //esta es mi solucion ,no se que pedo cuando 2 personas entren
 //por javascript se le debe mostrar un resumen de todo el carrito en simples filas(opcional)
      return redirect('/products');
     }

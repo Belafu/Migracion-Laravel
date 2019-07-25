@@ -4,7 +4,12 @@
 
 @section('content')
 
-<h2>Lista de productos</h2>
+<h2 class="h2-products">Lista de productos</h2>
+<div class="caja-filtro">
+  <div class="botom-filtro">
+    <a  href="#"> <i class="fas fa-filter">Filtros</i></a>
+  </div>
+</div>
 <div class="lista-productos">
   <form class="tags" action="/productosFiltrados" method="post">
       @csrf
@@ -38,7 +43,12 @@
             <p>Descripción: {{$product->description}}</p>
             <p>Precio: {{$product->price}}</p>
               <div class="botones-producto">
-                <a href="/product/{{$product->id}}">Ver más</a>
+                @if ($carritoActual->contains($product->name))
+                  <p>Ya lo tienes en el carrito</p>
+                @else
+                  <a href="/product/{{$product->id}}">Ver más</a>
+                @endif
+
                 <a href="/product/edit/{{$product->id}}">Editar</a>
               </div>
           </div>

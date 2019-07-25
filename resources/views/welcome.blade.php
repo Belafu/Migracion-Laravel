@@ -36,12 +36,12 @@
               <div class="item-centrados">
                 <ul class="items">
 
-                <li><a class="item" href="">PRODUCTOS</a></li>
+                <li><a class="item" href="/products">PRODUCTOS</a></li>
 
                 </ul>
               </div>
 
-  <li><a class="item" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+  <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
           <a href="/editarPerfil"><span class="nombre-header btn btn-color">Bienvenido {{ Auth::user()->name }}!</span></a>
 
           @else
@@ -72,8 +72,8 @@
                      @auth
                        <div class="nav-mobile">
                        <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
-                       <li><a class="" href="#"><i class="fas fa-box-open item-mobile" ></i></a></li>
-                       <li><a class="" href="#"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
+                       <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
+                       <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
                      <a href="/editarPerfil"><span class="nombre-header-mobile btn btn-color">Bienvenido {{ Auth::user()->name
                      }}!</span></a>
                  @else
