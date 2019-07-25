@@ -20,7 +20,7 @@
     </head>
     <body>
       <div class="nav-bar">
-          <a class="darkcode" href="index.php">DARKCODE</a>
+          <a id="section2" class="darkcode" href="index.php">DARKCODE</a>
       </div>
 
       <div class="contenedorMenu">
@@ -95,7 +95,11 @@
 
 
         @yield('content')
+        <div class="main arriba" id="section1">
+        <a class="texto-arriba"href="#section2">GO ARRIBA!</a>
+        </div>
       <footer>
+
           <div class="social">
             <div class="text-social">
                 <p>Siguenos en</p>
@@ -120,18 +124,43 @@
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-linkedin-in"></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
                     <span class="fab fa-instagram"></span>
                   </a>
                 </li>
               </ul>
+
             </div>
+
             <p class="copyright">  Copyright  &copy; Todos los Derechos Reservados <p>
           </div>
+
+          <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         </footer>
             <script src="{{ asset('js/app.js') }}" defer></script>
     </body>

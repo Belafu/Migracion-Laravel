@@ -91,8 +91,17 @@ footer{
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;*/
-  padding-top: 20px;
+}
+.arriba{
+  background-color: black;
+  color: white;
+  text-align: center;
   margin-top: 20px;
+}
+.texto-arriba{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }
 .texto-footer{
   background-color: pink;
