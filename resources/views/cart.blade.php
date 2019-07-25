@@ -24,7 +24,7 @@
         @empty
           <p>No ha seleccionado nada para comprar</p>
         @endforelse
-
+      
 <a href="/resumen" class="btn btn-primary ">comprar</a>
 
 @endsection
