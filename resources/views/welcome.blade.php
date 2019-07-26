@@ -15,17 +15,18 @@
         <link rel="stylesheet" href="/css/headerfooter.css">
         <link rel="stylesheet" href="/css/styleHome.css">
         <link rel="stylesheet" href="/css/products.css">
+        <link rel="stylesheet" href="/css/register.css">
         <!-- Styles -->
 
     </head>
     <body>
       <div class="nav-bar">
-          <a id="section2" class="darkcode" href="index.php">DARKCODE</a>
+          <a id="section2" class="darkcode" href="/index.php">DARKCODE</a>
       </div>
 
       <div class="contenedorMenu">
         <form class="busqueda" action="/products/search" method="get">
-          <input class="buscador" type="text" name="seach" value="" placeholder="Buscar productos..."><button type="button" class="btn btn-dark boton-buscar">Buscar</button>
+          <input class="buscador" type="text" name="search" value="" placeholder="Buscar productos..."><button type="submit" class="btn btn-dark boton-buscar">Buscar</button>
           </form>
 
 
@@ -41,8 +42,13 @@
               </div>
 
               <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
-          <a href="/editarPerfil"><span class="nombre-header btn btn-color">Bienvenido {{ Auth::user()->name }}!</span></a>
-
+          <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/editarPerfil"><span class="nombre-header">Bienvenido {{ Auth::user()->name }}!</span></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Mi cuenta</a>
+            <a class="dropdown-item" href="#">Desconectarse</a>
+          </div>
+        </div>
           @else
           <li><a class="item" href="/products">PRODUCTOS</a></li>
 
@@ -76,7 +82,14 @@
                        <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
                        <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
                        <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
-                       <li><a class="nombre-mobile" href="/editarPerfil">Bievenido {{ Auth::user()->name }}! </a></li>
+                       <div class="dropdown show">
+                       <li><a class="btn btn-secondary dropdown-toggle nombre-mobile" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/editarPerfil"><span class="nombre-header">Bienvenido {{ Auth::user()->name }}!</span></a></li>
+                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                         <a class="dropdown-item" href="#">Mi cuenta</a>
+                         <a class="dropdown-item" href="#">Desconectarse</a>
+                       </div>
+                     </div>
+                       
                  @else
                  <div class="nav-mobile">
                    <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
@@ -160,6 +173,9 @@ $(document).ready(function(){
   });
 });
 </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         </footer>
             <script src="{{ asset('js/app.js') }}" defer></script>

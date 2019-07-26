@@ -197,11 +197,6 @@ transform: rotateX(0deg) translateY(0);
   color: white;
 }
 .iconosSociales ul li:nth-child(4) a span:after{
-  background: #0077B5;
-  content: '\f0e1';
-  color: white;
-}
-.iconosSociales ul li:nth-child(5) a span:after{
   background: #e4405f;
   content: '\f16d';
   color: white;
@@ -216,6 +211,26 @@ transform: rotateX(0deg) translateY(0);
 .bar-mobile{
   display: none;
 }
+
+/* Cambios en el boton de dropdown */
+
+.dropdown > .btn .btn-secondary .dropdown-toggle, .show>.btn-secondary.dropdown-toggle {
+  background-color: #000!important;
+  padding: 2px 3px!important;
+}
+
+.dropdown > .btn .dropdown-toggle:hover, .dropdown-toggle, .show>.btn-secondary.dropdown-toggle {
+  background-color: #000!important;
+}
+
+.dropdown > .btn .dropdown-toggle:focus {
+  box-shadow: none!important;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0)!important;
+}
+
 
 @media screen and (max-width:991px){
   .nav-bar{

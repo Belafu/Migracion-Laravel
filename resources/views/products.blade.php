@@ -42,12 +42,14 @@
             <div class="nombre-descripcion">
               <p>Nombre: {{$product->name}}</p>
               <p>Descripción: {{$product->description}}</p>
-            </div>          
+            </div>
             <div class="botom-precio">
               <div class="precio">Precio: {{$product->price}}</div>
                 <div class="botones-producto">
-                  @if ($carritoActual->contains($product->name))
-                    <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
+                  @if (isset($carritoActual))
+                    @if ($carritoActual->contains($product->name))
+                        <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
+                    @endif           
                   @else
                     <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
                   @endif

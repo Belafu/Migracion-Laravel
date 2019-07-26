@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Tag;
 
 class HeaderController extends Controller
 {
@@ -12,11 +13,13 @@ class HeaderController extends Controller
      *
      * @return void
      */
-     public function search()
+     public function search(Request $request)
      {
-       $param = $_GET['search'];
-       $products = Product::where('name', 'like', "%$param%" ); //no olvidar get() para las consultas where;
-       $products->withPath('?search=' . $param);
-       return view('products', compact('products'));
+       $tags = Tag::all();
+       $param = $request['search'];
+
+       $products = Product::where('name', 'like', "%$param%" )->get(); //no olvidar get() para las consultas where;
+       //$products->withPath('?search=' . $param);
+       return view('products', compact('products','tags'));
      }
 }

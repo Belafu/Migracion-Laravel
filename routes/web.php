@@ -31,7 +31,7 @@ Route::get('/cart', 'CartController@show');//->middleware('auth');
 Route::post('/cart/{id}', 'CartController@update');
 Route::delete('/cart/{id}', 'CartController@destroy');
 
-Route::get('/product/search', 'HeaderController@search');
+Route::get('/products/search', 'HeaderController@search');
 
 Auth::routes();
 
