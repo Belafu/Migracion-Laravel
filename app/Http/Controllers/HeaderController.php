@@ -16,6 +16,7 @@ class HeaderController extends Controller
      public function search(Request $request)
      {
        $tags = Tag::all();
+       //$carritoActual = [];
        $param = $request['search'];
 
        $products = Product::where('name', 'like', "%$param%" )->get(); //no olvidar get() para las consultas where;

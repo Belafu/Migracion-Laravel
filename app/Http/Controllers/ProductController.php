@@ -128,6 +128,7 @@ class ProductController extends Controller
     }
     public function filtros(Request $request){
       $tags = Tag::all();
+  
       //son los productos filtrados |pero me conviene el nombre para recorrerlo
       $products = Product::all();
       $cota = 2000;

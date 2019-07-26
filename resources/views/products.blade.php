@@ -47,9 +47,9 @@
               <div class="precio">Precio: {{$product->price}}</div>
                 <div class="botones-producto">
                   @if (isset($carritoActual))
-                    @if ($carritoActual->contains($product->name))
-                        <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
-                    @endif           
+                    @if ($carritoActual!= null && $carritoActual->contains($product->name))
+                      <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
+                    @endif
                   @else
                     <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
                   @endif
