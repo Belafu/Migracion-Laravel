@@ -19,8 +19,9 @@ class CreateProductsTable extends Migration
             $table->string('description', 300);
             $table->decimal('price', 10, 2);
             //$table->bigInteger('user_id')->unsigned()->nullable();
-
+            $table->string('color', 20)->nullable();
             $table->string('featured_img', 300);
+            $table->integer('stock');
             $table->softDeletes();
             $table->timestamps();
 

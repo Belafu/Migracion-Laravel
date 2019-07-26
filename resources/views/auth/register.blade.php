@@ -61,6 +61,40 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="genre" class="col-md-4 col-form-label text-md-right" style="font-weight:bold">{{ __('Genero') }}</label>
+
+                            <div class="col-md-6" style="display:flex; flex-direction: row;">
+                                <input id="genre" type="radio" class="form-control" name="genre" required autocomplete="new-genre" value="masculino">Masculino
+                                <input id="genre2" type="radio" class="form-control" name="genre" required autocomplete="new-genre" value="femenino">Femenino
+                                <input id="genre3" type="radio" class="form-control" name="genre" required autocomplete="new-genre" value="indefinido">Otro
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="pais" class="col-md-4 col-form-label text-md-right" style="font-weight:bold">{{ __('Pais') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="" name="pais">
+                                    <option value="argentina">Argentina</option>
+                                    <option value="brasil">Brasil</option>
+                                    <option value="uruguay">Uruguay</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="ciudad" class="col-md-4 col-form-label text-md-right" style="font-weight:bold">{{ __('Ciudad') }}</label>
+
+                            <div class="col-md-6">
+                                <select class="" name="ciudad">
+                                    <option value="buenos aires">Buenos Aires</option>
+                                    <option value="porto alegre">Porto Alegre</option>
+                                    <option value="montevideo">Montevideo</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button class="btn btn-dark" type="submit" class="btn btn-primary">

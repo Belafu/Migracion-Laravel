@@ -13,7 +13,8 @@ $factory->define(Product::class, function (Faker $faker) {
         'description' => $faker->sentence(20),
         'price'=> $faker->randomFloat(2, 300, 4000),
         'featured_img' => $faker->image($path, 300, 300, 'food',false),
-      //retringo la vista del usuario por roles  
+        'stock' => $faker->randomFloat(1,10),
+      //retringo la vista del usuario por roles
       //  'user_id' => $faker->numberBetween(1,5) //Acá está la clave primaria. Hay que tener en cuenta que los valores a ingresar deben EXISTIR en la tabla users de lo contrario la consola dara error de SQL.
 
     ];

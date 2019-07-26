@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
 
         //En caso de tener tablas pivot (tablas intermedias) para resolver relaciones de muchos a muchos tenemos que refactorizar el código para poder completar la tabla pivot con datos de cada una de las otras 2 tablas que componene la relación.
-        $usuers = factory(\App\User::class, 5)->create();
+        //$usuers = factory(\App\User::class, 5)->create();
         $tags = factory(\App\Tag::class, 3)->create();
         $products = factory(\App\Product::class, 6)->create();
 
