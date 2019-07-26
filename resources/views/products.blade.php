@@ -49,7 +49,8 @@
                   @if (isset($carritoActual))
                     @if ($carritoActual->contains($product->name))
                         <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
-                    @endif           
+                    @endif
+
                   @else
                     <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
                   @endif
@@ -65,4 +66,3 @@
 </div>
 
 @endsection
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
