@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h2 class="h2-products">Lista de productos</h2>
+<h2 class="h2-products">Lista de Productos</h2>
 <div class="caja-filtro">
   <div class="botom-filtro">
     <a  href="#"> <i class="fas fa-filter">Filtros</i></a>
@@ -47,22 +47,21 @@
               <div class="precio">Precio: {{$product->price}}</div>
                 <div class="botones-producto">
                   @if (isset($carritoActual))
-<<<<<<< HEAD
                     @if ($carritoActual->contains($product->name))
-                        <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
-                    @endif
-
-=======
-                    @if ($carritoActual!= null && $carritoActual->contains($product->name))
                       <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
                     @else
-                        <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
+                      <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
                     @endif
->>>>>>> 0cc074c829d05e7d51c06f75b50d9125f390abf7
                   @else
                     <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
                   @endif
-                  <a class="btn btn-outline-warning" href="/product/edit/{{$product->id}}">Editar</a>
+
+                  @if ( Auth::user()!= null)
+                    @if (Auth::user()->rol == 1)
+                        <a class="btn btn-outline-warning" href="/product/edit/{{$product->id}}">Editar</a>
+                    @endif
+                  @endif
+
                 </div>
             </div>
           </div>

@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('genre');
             $table->string('pais');
             $table->string('ciudad');
-            $table->integer('rol')->nullable();
+            $table->integer('rol');
             $table->timestamps();
             $table->softDeletes();
         });

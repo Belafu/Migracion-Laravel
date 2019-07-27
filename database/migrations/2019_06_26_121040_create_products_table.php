@@ -21,7 +21,7 @@ class CreateProductsTable extends Migration
             //$table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('color', 20)->nullable();
             $table->string('featured_img', 300);
-            $table->integer('stock');
+            $table->integer('stock')->nullable();//escalar para borrar
             $table->softDeletes();
             $table->timestamps();
 

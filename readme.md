@@ -1,3 +1,5 @@
+<p align="center"><img src="public/images/logo-darkcode.jpg" width=400px></p>
+
 ## Pasos para instalar el Proyecto
 1. Descargar el repositorio
 2. Por consola ingresar a la carpeta del repositorio.
@@ -12,17 +14,9 @@
 11. Ejecutar `php artisan serve` para iniciar el servidor web.
 
 
-## Pasos para agregar tags a un producto.
-La relacion es de `muchos a muchos` por lo tanto vamos a necesitar 2 tablas más: `tags` y la tabla pivot que relaciones `product_tag`. El nombre de la tabla pivot debe escribirse con los nombres de las tablas en `singular` y en orden alfabético.
-1. Crear la tabla `tags` usando migraciones.
-2. Crear la tabla pivot `product_tag` respetando el std Laravel.
-3. Crear el modelo `Tag`.
-4. Definir la relación `muchos a muchos` en los modelos `Tag` y `Product`.
-5. Crear las `factory` para tags.
-6. Refactorizar el seeder para que actulice la tabla pivot con datos de las tablas `products` y `tags`.
 
-## Chekeando permisos.
-1. Franco : Funcionan mis permisos.
+## Este proyecto fue echo en
+
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
@@ -47,4 +41,3 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-:)

@@ -36,7 +36,7 @@
   </div> --}}
 
   <div class="nav-bar">
-    <a id="section2" class="darkcode" href="/index.php">DARKCODE</a>
+    <a id="section2" class="darkcode" href="/">DARKCODE</a>
   </div>
 
   <div class="contenedorMenu">

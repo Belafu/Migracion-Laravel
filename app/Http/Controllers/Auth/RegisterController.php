@@ -73,6 +73,7 @@ class RegisterController extends Controller
             'genre'=> $data['genre'],
             'pais'=>$data['pais'],
             'ciudad'=>$data['ciudad'],
+            'rol'=> 0 ,//Todos son automaticamente 0 como Usuarios
         ]);
 
     }

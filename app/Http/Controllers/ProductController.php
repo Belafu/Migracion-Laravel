@@ -18,9 +18,10 @@ class ProductController extends Controller
         //Mostrar todos los productos.
         $products = Product::all();
         $tags = Tag::all();
+        //para desabilitar que la persona compre el mismo producto 2 veces
         $carritoActual = Cart::where('status','=',0)->get();
         $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
-
+        // si $carritoActual no tiene elementos devuelve una collection vacia
         return view('products', compact('products','tags','carritoActual'));
     }
 
@@ -128,7 +129,7 @@ class ProductController extends Controller
     }
     public function filtros(Request $request){
       $tags = Tag::all();
-  
+
       //son los productos filtrados |pero me conviene el nombre para recorrerlo
       $products = Product::all();
       $cota = 2000;
