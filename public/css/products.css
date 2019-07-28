@@ -14,13 +14,23 @@
   border-right: 5px solid rgb(240, 240, 240) ;
   text-align: center;
 }
+/*---------CAJA GRANDE------------*/
+.lista-productos{
+
+}
 /*filtro*/
 .tags{
   width: 150px;
   margin-right: 10px;
   display: block;
+  border: 1px solid;
+  background-color: rgb(255, 255, 255);
   display: none;
 }
+.productos{
+
+}
+/*----------------------*/
 .filtro-precio, .filtro-tag{
   width: 150px;
 }
@@ -58,11 +68,11 @@
 /*FIltros*/
 .filtro-precio{
 padding: 10px;
-background-color: rgba(0, 0, 0, 0.12);
+
 }
 .filtro-tag{
 padding: 10px;
-background-color: rgba(0, 0, 0, 0.12);
+
 }
 /*botones*/
 .botom-precio{

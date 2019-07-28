@@ -71,5 +71,5 @@
     @endforelse
   </div>
 </div>
-
+<script type="text/javascript" src="js/productos.js"></script>
 @endsection
