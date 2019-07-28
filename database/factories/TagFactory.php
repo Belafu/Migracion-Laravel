@@ -5,12 +5,18 @@
 use App\Tag;
 use Faker\Generator as Faker;
 
-$factory->define(Tag::class, function (Faker $faker) {
-  $categorias=["mouses" , "teclados" , "auriculares"];
-  
+/*------------------Usando factorys---------------*/
+// $factory->define(Tag::class, function (Faker $faker) {
+//     return [
+//         'name'=>$faker->word,
+//     ];
+// });
 
-    return [
-        'name'=>$categorias[0],
-    ];
+//marca 
+$categorias=["mouses" , "teclados" , "auriculares"];
 
-});
+foreach ($categorias as $value) {
+  $tag = new Tag;
+  $tag->name = $value;
+  $tag->save();
+}

@@ -13,7 +13,7 @@ botom.onclick = function(){
     productos.style.zIndex = "2" ;
    // cajaFiltro.style.transform = "translate(100px)";
     productos.style.position = "relative";
-    productos.style.bottom = "658px";
+    productos.style.bottom = "460px";
     productos.style.opacity = "0.3";
 
     productos.onclick = function(){
