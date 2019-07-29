@@ -25,7 +25,7 @@
     <div class="filtro-tag">
       <p>Tags</p>
       @foreach ($tags as $tag)
-        <input type="checkbox" name="tag" value="{{$tag->id}}"> {{$tag->name}} <br>
+        <input type="radio" name="tag" value="{{$tag->id}}"> {{$tag->name}} <br>
       @endforeach
     </div>
     <button type="submit" class="btn btn-success">ENVIAR</button>

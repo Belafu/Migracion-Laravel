@@ -129,29 +129,21 @@ class ProductController extends Controller
     }
     public function filtros(Request $request){
       $tags = Tag::all();
-
       //son los productos filtrados |pero me conviene el nombre para recorrerlo
       $products = Product::all();
-      $cota = 2000;
-      if (isset($request->price) ) {
-        $products = $products->filter(function($value){
-          return ($value->price) > $cota ;
-        });
-      }
 
-      /*if (isset($request['tag'])) {
-        $productsConTag =  Product_tag::where('tag_id','=',$request['tag'])->get();
-        $idsProductosDeEseTag = $productsConTag->map(function($value){
-          return $value->product_id ;
-        });
-        if (!$idsProductosDeEseTag) {//SI el array no esta vacio
-          $products = $products->filter(function($value){
-            return  $idsProductosDeEseTag->contains($value->id);
-          });
+        if (isset($request->price) ) {
+          $proFiltprecio = Product::where('price','>',$request->price)
+          ->where('price','<',$request->price +1000)->get();
+          $products = $products->intersect($proFiltprecio);
         }
-            //dd($product);
-      }*/
-      return view('products', compact('products','tags'));
-    }
 
+        // dd($products);
+        if (isset($request->tag) ) {
+          $elTag = Tag::find($request->tag);
+          $proFiltTag = $elTag->products ;
+          $products = $products->intersect($proFiltTag);
+        }
+        return view('products', compact('products','tags'));
+    }
 }
