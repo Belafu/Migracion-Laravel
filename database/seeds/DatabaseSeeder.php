@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             //
              $usuers = factory(\App\User::class, 5)->create();
             // $tags = factory(\App\Tag::class, 5)->create();
-            // $products = factory(\App\Product::class, 5)->create();
+             $products = factory(\App\Product::class, 5)->create();
 
         //Recorremos los productos que acabamos de crear y completamos la tabla pivot con el método attach().
         //Para que todo funcione debe estar creada la relación de muchos a muchos en los modelos Product y Tag.

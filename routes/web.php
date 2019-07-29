@@ -35,6 +35,8 @@ Route::get('/products/search', 'HeaderController@search');
 
 Auth::routes();
 
+Route::get('/editarPerfil/{id}', 'editperfilController@edit');
+Route::post('/editarPerfil/{id}', 'editperfilController@update');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resumen', 'CartController@comprar')->middleware('auth');

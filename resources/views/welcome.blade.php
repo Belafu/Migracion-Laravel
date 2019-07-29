@@ -49,15 +49,15 @@
         <div class="item-centrados">
           <ul class="items">
             <li><a class="item" href="/products">PRODUCTOS</a></li>
-            <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+
           </ul>
         </div>
 
         <div class="dropdown show">
-          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/editarPerfil"><span class="nombre-header">Bienvenido {{ Auth::user()->name }}!</span>
+          <a class="btn btn-secondary dropdown-toggle" style="background-color: black" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/editarPerfil"><span class="nombre-header">Bienvenido {{ Auth::user()->name }}!</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Mi cuenta</a>
+            <a class="dropdown-item" href="/editarPerfil/{{ Auth::user()->id}}">Mi cuenta</a>
             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
           </div>
@@ -65,9 +65,9 @@
             @csrf
           </form>
         </div>
-
+        <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
       @else
-        <li><a class="item" href="/products">PRODUCTOS</a></li>
+        <li><a class="item" href="/products" style="margin-left:20px;">PRODUCTOS</a></li>
 
         <div class="">
           <ul class="registerylogin">
@@ -160,12 +160,12 @@
 
     </footer>
 
-    {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pX1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> --}}
-    {{-- <script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pX1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
     $(document).ready(function(){
-      // Add smooth scrolling to all links
+       // Add smooth scrolling to all links
       $("a").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
