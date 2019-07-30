@@ -35,7 +35,29 @@
     <img src="images/auriculargamer.jpeg" class="img-fluid" alt="Responsive image">
     <h2 class="novedad">Auricular Gamer Razer </h2>
     <div class="botones">
-      <button id="info" class="btn btn-dark" type="button" name="button">+Informacion</button>
+      <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
       <button class="btn btn-dark" type="button" name="button">Productos</button>
     </div>
 
@@ -46,7 +68,29 @@
     <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
   <h2 class="novedad">Mouse Gamer Razer </h2>
   <div class="botones">
-      <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
+</div>
       <button class="btn btn-dark" type="button" name="button">Productos</button>
   </div>
 </div>
@@ -54,7 +98,29 @@
   <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
   <h2 class="novedad">Teclado Gamer Razer </h2>
   <div class="botones">
-    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
+</div>
     <button class="btn btn-dark" type="button" name="button">Productos</button>
   </div>
 </div>
@@ -67,7 +133,29 @@
     <img src="images/auriculargamer.jpeg" class="img-fluid imagen" alt="Responsive image">
     <h2 class="novedad">Auricular Gamer Razer </h2>
     <div class="botones">
-      <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+      <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+        Lorem ipsum doerunt mollit anim id est laborum.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
       <button class="btn btn-dark" type="button" name="button">Productos</button>
     </div>
   </div>
@@ -77,7 +165,29 @@
   <img class="imagen-x"src="images/mousegamer.jpeg" alt="Responsive image">
   <h2 class="novedad">Mouse Gamer Razer </h2>
   <div class="botones">
-    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
+</div>
     <button class="btn btn-dark" type="button" name="button">Productos</button>
   </div>
 </div>
@@ -85,7 +195,29 @@
   <img src="images/mousegamer.jpeg" class="img-fluid imagen" alt="Responsive image">
   <h2 class="novedad">Teclado Gamer Razer </h2>
   <div class="botones">
-    <button class="btn btn-dark" type="button" name="button">+Informacion</button>
+    <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">+Informacion</button>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+      Lorem ipsum doerunt mollit anim id est laborum.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary btn btn-dark" data-dismiss="modal">Cerrar</button>
+    </div>
+  </div>
+</div>
+</div>
     <button class="btn btn-dark" type="button" name="button">Productos</button>
   </div>
 </div>

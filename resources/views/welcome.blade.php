@@ -91,17 +91,30 @@
   @if (Route::has('login'))
     @auth
       <div class="nav-mobile">
-        <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
-        <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
-        <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
 
-        <div class="dropdown show">
-          <li><a class="nombre-mobile btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/editarPerfil">Bievenido {{ Auth::user()->name }}! </a></li>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Mi cuenta</a>
-            <a class="dropdown-item" href="#">Desconectarse</a>
-          </div>
+        <li><a class="" href="/products" style="font-size:30px"><i class="fas fa-box-open item-mobile"></i></a></li>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" style="background-color: black; font-weight: bold; font-size:20px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Bienvenido {{ Auth::user()->name }}!
+          </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/editarPerfil/{{ Auth::user()->id}}" >Mi cuenta</a>
+              <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+            </div>
         </div>
+        <li><a class="" href="/cart" style="font-size:30px"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
+
+        <form class="" action="/products/search" method="get">
+        <div class="container" style="margin-top: 20px; margin-bottom:20px">
+          <i type="submit" name="search" class="fas fa-search item-mobile" style="font-size:21px; "><input type="text" name="" value="" style="padding-right:40px" placeholder="  Buscar productos..."></i>
+        </div>
+        </form>
+
+
+
+
+
 
       @else
         <div class="nav-mobile">
@@ -163,6 +176,7 @@
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pX1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
        // Add smooth scrolling to all links
@@ -188,6 +202,6 @@
         } // End if
       });
     });
-    </script> --}}
+    </script>
   </body>
   </html>
