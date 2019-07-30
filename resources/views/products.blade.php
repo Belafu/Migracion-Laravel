@@ -11,25 +11,36 @@
   </div>
 </div>
 <div class="lista-productos">
-  <form class="tags" action="/productosFiltrados" method="post">
+  <form class="tags" action="/productosFiltrados" method="get">
       @csrf
     <h3>Filtros</h3>
     <div class="filtro-precio">
       <p>Precios</p>
-        <input type="radio" name="price" value="0"> 0 - 1000 <br>
-        <input type="radio" name="price" value="1000"> 1000 - 2000 <br>
-        <input type="radio" name="price" value="2000"> 2000 - 3000 <br>
-        <input type="radio" name="price" value="3000"> 3000 - 4000 <br>
-        <input type="radio" name="price" value="4000"> 4000 - 5000 <br><br>
+      @for ($i = 0; $i < 6; $i++)
+        @if (isset($_GET['price']) && $_GET['price']== $i*1000 )
+          <input type="radio" name="price" value="{{$i*1000}}" checked> {{$i*1000}} - {{($i+1)*1000}}<br>
+        @else
+          <input type="radio" name="price" value="{{$i*1000}}" > {{$i*1000}} - {{($i+1)*1000}} <br>
+        @endif
+      @endfor
     </div>
     <div class="filtro-tag">
       <p>Tags</p>
       @foreach ($tags as $tag)
-        <input type="radio" name="tag" value="{{$tag->id}}"> {{$tag->name}} <br>
+        @if (isset($_GET['tag']) && $_GET['tag']== $tag->id )
+          <input type="radio" name="tag" value="{{$tag->id}}" checked> {{$tag->name}} <br>
+        @else
+          <input type="radio" name="tag" value="{{$tag->id}}"> {{$tag->name}} <br>
+        @endif
       @endforeach
     </div>
-    <button type="submit" class="btn btn-success">ENVIAR</button>
-    <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+    <br>
+    <br>
+    <div class="botones-fitrar">
+      <a href="/products"  class="btn btn-outline-secondary">Limpiar</a>
+      <button type="submit" class="btn btn-outline-success">Filtar</button>
+    </div>
+
   </form>
 
   <div class="productos">

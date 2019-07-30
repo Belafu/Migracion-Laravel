@@ -40,4 +40,4 @@ Route::post('/editarPerfil/{id}', 'editperfilController@update');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resumen', 'CartController@comprar')->middleware('auth');
-Route::post('/productosFiltrados', 'ProductController@filtros');
+Route::get('/productosFiltrados', 'ProductController@filtros');

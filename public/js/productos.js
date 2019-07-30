@@ -9,7 +9,7 @@ botom.onclick = function(){
     cajaFiltro.style.display = "block";
     /*para que las imagenes queden atras*/
     cajaFiltro.style.position = "relative";
-
+    
     productos.style.zIndex = "2" ;
    // cajaFiltro.style.transform = "translate(100px)";
     productos.style.position = "relative";
