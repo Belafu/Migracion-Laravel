@@ -48,7 +48,7 @@
       @auth
         <div class="item-centrados">
           <ul class="items">
-            <li><a class="item" href="/products">PRODUCTOS</a></li>
+            <li><a class="item" href="/products" style="text-decoration:none;">PRODUCTOS</a></li>
 
           </ul>
         </div>

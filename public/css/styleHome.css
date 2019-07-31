@@ -77,6 +77,7 @@ border-radius: 3%;
   }
   .novedad-uno{
     margin-top: 10px;
+
   }
   .novedad{
     text-align: center;
@@ -84,5 +85,11 @@ border-radius: 3%;
   .carros{
     width: 100%;
 
+  }
+  .img-fluid{
+    margin-left: 30%;
+  }
+  .botones{
+  justify-content: space-around;
   }
 }
