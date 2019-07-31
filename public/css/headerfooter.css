@@ -34,6 +34,10 @@ a{
   margin-top: 10px;
   color: white;
 }
+.darkcode:hover{
+ text-decoration: none;
+ color: lightblue;
+}
 .items{
   display: flex;
   flex-wrap: wrap;
