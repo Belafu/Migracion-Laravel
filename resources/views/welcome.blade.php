@@ -85,14 +85,24 @@
   </div>
 
   <div class="bar-mobile">
-    <a class="darkcode-mobile" href="index.php">DARKCODE</a>
+    <a class="darkcode-mobile" href="/">DARKCODE</a>
   </div>
 
   @if (Route::has('login'))
     @auth
       <div class="nav-mobile">
-
+        <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" style="background-color:black" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-search item-mobile"></i>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <form class="" action="/products/search" method="get">
+    <i type="submit" class="fas fa-search item-mobile" ><input type="text" name="search" value="" placeholder="  Buscar Productos..."></i>
+    </form>
+  </div>
+</div>
         <li><a class="" href="/products" style="font-size:30px"><i class="fas fa-box-open item-mobile"></i></a></li>
+        <li><a class="" href="/cart" style="font-size:30px"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" style="background-color: black; font-weight: bold; font-size:20px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Bienvenido {{ Auth::user()->name }}!
@@ -103,13 +113,12 @@
               document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
             </div>
         </div>
-        <li><a class="" href="/cart" style="font-size:30px"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
 
-        <form class="" action="/products/search" method="get">
-        <div class="container" style="margin-top: 20px; margin-bottom:20px">
-          <i type="submit" name="search" class="fas fa-search item-mobile" style="font-size:21px; "><input type="text" name="" value="" style="padding-right:40px" placeholder="  Buscar productos..."></i>
-        </div>
-        </form>
+
+
+
+
+
 
 
 
@@ -118,7 +127,16 @@
 
       @else
         <div class="nav-mobile">
-          <li><a class="" href="#"><i class="fas fa-search item-mobile"></i></a></li>
+
+    <button class=" dropdown-toggle" style="background-color: white; border:none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i style="color:black; "class="fas fa-search item-mobile"></i>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <form class="" action="/products/search" method="get">
+      <i type="submit" class="fas fa-search item-mobile" ><input type="text" name="search" value="" placeholder="  Buscar Productos..."></i>
+      </form>
+    </div>
+
           <li><a class="" href="/products"><i class="fas fa-box-open item-mobile" ></i></a></li>
           <li><a class="" href="/cart"><i class="fas fa-shopping-cart item-mobile"></i></a></li>
           <li><a class="logyreg-mobile"href="{{ route('login')}}">Login</a></li>
