@@ -76,9 +76,7 @@
 
                             <div class="col-md-6">
                                 <select class="pais" name="pais">
-                                    <option value="argentina">Argentina</option>
-                                    <option value="brasil">Brasil</option>
-                                    <option value="uruguay">Uruguay</option>
+                                  <option value="">Elegí tu país</option>
                                 </select>
                             </div>
                         </div>
@@ -88,9 +86,7 @@
 
                             <div class="col-md-6">
                                 <select class="ciudad" name="ciudad">
-                                    <option value="buenos aires">Buenos Aires</option>
-                                    <option value="porto alegre">Porto Alegre</option>
-                                    <option value="montevideo">Montevideo</option>
+                                  <option value="">Elegí tu ciudad</option>
                                 </select>
                             </div>
                         </div>
