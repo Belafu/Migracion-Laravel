@@ -32,7 +32,7 @@
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/auriculargamer.jpeg" class="img-fluid" alt="Responsive image">
+    <img src="images/auriculargamer.jpeg" class="img-fluid ipad" alt="Responsive image">
     <h2 class="novedad">Auricular Gamer Razer </h2>
     <div class="botones">
       <button id="info" class="btn btn-dark btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
@@ -68,7 +68,7 @@
 </div>
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
+    <img src="images/mousegamer.jpeg" class="img-fluid ipad" alt="Responsive image">
   <h2 class="novedad">Mouse Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
@@ -104,7 +104,7 @@
 
 <div class="novedad-uno">
   <div class="contenedor-producto">
-  <img src="images/tecladogamer.jpg" class="img-fluid" alt="Responsive image">
+  <img src="images/tecladogamer.jpg" class="img-fluid ipad" alt="Responsive image">
   <h2 class="novedad">Teclado Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
@@ -144,7 +144,7 @@
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/auriculargamer.jpeg" class="img-fluid" alt="Responsive image">
+    <img src="images/auriculargamer.jpeg" class="img-fluid ipad" alt="Responsive image">
     <h2 class="novedad">Auricular Gamer Razer </h2>
     <div class="botones">
       <button id="info" class="btn btn-dark btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
@@ -180,7 +180,7 @@
 </div>
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/mousegamer.jpeg" class="img-fluid" alt="Responsive image">
+    <img src="images/mousegamer.jpeg" class="img-fluid ipad" alt="Responsive image">
   <h2 class="novedad">Mouse Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
@@ -216,7 +216,7 @@
 
 <div class="novedad-uno">
   <div class="contenedor-producto">
-  <img src="images/tecladogamer.jpg" class="img-fluid" alt="Responsive image">
+  <img src="images/tecladogamer.jpg" class="img-fluid ipad" alt="Responsive image">
   <h2 class="novedad">Teclado Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>

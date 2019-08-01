@@ -58,7 +58,6 @@ border-radius: 3%;
 .botones{
   display: flex;
   padding: 10px;
-  flex: wrap;
   justify-content: center
 }
 
@@ -66,7 +65,6 @@ border-radius: 3%;
   .novedades{
     margin-top: 30px;
     width: 100%;
-    
     background-repeat: repeat;
     display: inline-block;
     overflow:hidden;
@@ -92,4 +90,19 @@ border-radius: 3%;
   .botones{
   justify-content: space-around;
   }
+  .ipad{
+    max-width: none;
+  }
+}
+@media screen and (max-width:1024px){
+.contenedor-producto{
+  display: flex;
+  flex-direction: column;
+}
+.ipad{
+  margin-left: 25%;
+  max-width: 50%;
+  height: 100%;
+  margin-bottom: 10px;
+}
 }
