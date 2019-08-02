@@ -21,9 +21,7 @@
   text-align: center;
 }
 /*---------CAJA GRANDE------------*/
-.lista-productos{
 
-}
 /*filtro*/
 .tags{
   width: 190px;
@@ -33,15 +31,13 @@
   background-color: rgb(255, 255, 255);
   display: none;
 }
-.productos{
 
-}
 /*----------------------*/
 .filtro-precio, .filtro-tag{
   width: 150px;
 }
 .botones-fitrar{
-  width: 190px;
+  width: 162px;
   border-bottom: 1px solid;
   display: flex;
   justify-content: space-around;
