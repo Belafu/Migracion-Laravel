@@ -69,8 +69,11 @@
 
                   @if ( Auth::user()!= null)
                     @if (Auth::user()->rol == 1)
-                        <a class="btn btn-outline-warning" href="/product/edit/{{$product->id}}">Editar</a>
+                      
+                        <a class="btn btn-warning" href="/product/edit/{{$product->id}}">Editar</a>
+
                     @endif
+
                   @endif
 
                 </div>
@@ -82,5 +85,10 @@
     @endforelse
   </div>
 </div>
+@if (Auth::user()->rol == 1)
+
+<a class="btn btn-info" href="/product-add">Añadir Producto</a>
+@endif
+
 <script type="text/javascript" src="js/productos.js"></script>
 @endsection

@@ -7,7 +7,7 @@
 
 
 
-        <article class="info-productos infooo">
+        <article class="info-productos">
 
           <div class="foto-producto">
             <img src="/storage/products/{{$product->featured_img}}" alt="">

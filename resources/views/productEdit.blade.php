@@ -21,7 +21,14 @@
   </p>
   <p>Imagen actual</p>
   <img src="/storage/products/{{$product->featured_img}}" alt="">
-  <button type="submit">Enviar</button>
+  <p><button class="btn btn-success"type="submit">Enviar</button></p>
+
+
+  <form class="" action="/product/{id}" method="post">
+    @csrf
+    <input type="hidden" name="id" value="{{$product->id}}">
+    <button class="btn btn-danger"type="submit"> Borrar </button>
+  </form>
   {{-- <button type="reset">Limpiar</button> --}}
 </form>
 @endsection
