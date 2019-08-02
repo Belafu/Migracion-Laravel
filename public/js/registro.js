@@ -1,21 +1,17 @@
 console.log("holas regsitro");
 var inputName = document.querySelector("[name=name]");
-var mensajesCorrecion = document.querySelectorAll(".invalid-feedback");
-//console.log(mensajesCorrecion);
+var mensajesCorrecion = document.querySelectorAll(".errores");
+console.log(mensajesCorrecion[0]);
+
 inputName.onblur = function() {
   var nombre = inputName.value;
-  // for (var i = 0; i < nombre.length - 2; i++) {
-  //   if (nombre[i] == nombre[i+1] && nombre[i+1] == nombre[i+2]) {
-  //     mensajesCorrecion[0].innerText = "tiene muchas: " + nombre[i];
-  //   }
-  // }
-  if (esNombreValido(nombre)) {
-      mensajesCorrecion[0].innerText = "hola";
+  console.log(nombre);
+  if (!esNombreValido(nombre) ||  nombre.length > 10) {
+      mensajesCorrecion[0].innerText = "nombre invalido o mayor a 10 caracteres";
+      mensajesCorrecion[0].style.color = "red";
   }else {
-      mensajesCorrecion[0].innerText = "hola";
+      mensajesCorrecion[0].innerText = "";
   }
-
-  console.log("entro");
 }
 //no hay tres letras repetidas
 function esNombreValido(nombre){
