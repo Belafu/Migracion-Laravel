@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
 Route::get('/product-add', 'ProductController@create');
 Route::post('/product-add', 'ProductController@store');
 
