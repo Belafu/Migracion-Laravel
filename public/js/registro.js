@@ -1,4 +1,33 @@
-console.log("holas paises");
+console.log("holas regsitro");
+var inputName = document.querySelector("[name=name]");
+var mensajesCorrecion = document.querySelectorAll(".invalid-feedback");
+//console.log(mensajesCorrecion);
+inputName.onblur = function() {
+  var nombre = inputName.value;
+  // for (var i = 0; i < nombre.length - 2; i++) {
+  //   if (nombre[i] == nombre[i+1] && nombre[i+1] == nombre[i+2]) {
+  //     mensajesCorrecion[0].innerText = "tiene muchas: " + nombre[i];
+  //   }
+  // }
+  if (esNombreValido(nombre)) {
+      mensajesCorrecion[0].innerText = "hola";
+  }else {
+      mensajesCorrecion[0].innerText = "hola";
+  }
+
+  console.log("entro");
+}
+//no hay tres letras repetidas
+function esNombreValido(nombre){
+  for (var i = 0; i < nombre.length - 2; i++) {
+    if (nombre[i] == nombre[i+1] && nombre[i+1] == nombre[i+2]) {
+      return false;
+      // return "tiene muchas: " + nombre[i];
+    }
+  }
+  return true;
+}
+
 /*API PAISES*/
 var selectorPais =  document.querySelector(".pais");
 fetch('https://api.mercadolibre.com/classified_locations/countries')
