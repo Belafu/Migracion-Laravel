@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h2 class="cart-text">Cart</h2>
+
 
 <div class="supercontenedor">
 @forelse ($cart as $item)
@@ -37,7 +37,7 @@
 @endforelse
 </div>
 <div class="b-carrito">
-  <a href="/resumen" class="btn btn-primary ">comprar</a>
+  <a href="/resumen" class="btn btn-dark ">COMPRAR</a>
 
 </div>
 

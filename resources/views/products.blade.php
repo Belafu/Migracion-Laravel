@@ -88,8 +88,8 @@
 @if ( Auth::user()!= null && Auth::user()->rol == 1)
 
       <a class="btn btn-info" href="/product-add">Añadir Producto</a>
-      
+
 @endif
 
-<script type="text/javascript" src="js/productos.js"></script>
+{{-- <script type="text/javascript" src="js/productos.js"></script> --}}
 @endsection

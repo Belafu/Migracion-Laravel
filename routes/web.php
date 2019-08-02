@@ -41,3 +41,7 @@ Route::post('/editarPerfil/{id}', 'editperfilController@update');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/resumen', 'CartController@comprar')->middleware('auth');
 Route::get('/productosFiltrados', 'ProductController@filtros');
+
+// Route::get('/instalar', function(){
+//   Artisan::call("storage:link");
+// });

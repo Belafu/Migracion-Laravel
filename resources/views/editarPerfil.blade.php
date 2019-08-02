@@ -63,18 +63,29 @@
             </div>
         </div>
     </div>
+<div class="contenedor">
+
+@forelse($compras as $comp)
+
+    <div class="card" style="width: 18rem;">
+  <img style="" src="/storage/products/{{$comp->featured_img}}" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">{{$comp->name}}</h5>
+    <p class="card-text">{{$comp->description}}</p>
+    <p>{{$comp->price}}</p>
+    <h2>PRODUCTO COMPRADO</h2>
+  </div>
+  </div>
+  @empty
+    <h2 style="margin-top: 20px">NO HAY COMPRAS REALIZADAS</h2>
+
+  @endforelse
+  </div>
 
 </div>
 
-@forelse($compras as $comp)
-  <p>{{$comp->name}}</p>
-  <p>{{$comp->description}}</p>
-  <p>{{$comp->price}}</p>
-  <br>
-  <br>
-@empty
-  <p>No hay compras</p>
-@endforelse
+
+
 
     <!-- Js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
