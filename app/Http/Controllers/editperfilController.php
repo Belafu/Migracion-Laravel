@@ -21,7 +21,7 @@ class editperfilController extends Controller
   public function update(Request $request, $id)
   {
     $usuario = User::find($id);
-    // dd($request);
+    // Falta validar error si es que me quiro cambiar de mail y ya esta usado
     //Validaciones
     //$rules = [....]
 
@@ -36,7 +36,10 @@ class editperfilController extends Controller
     $usuario->name = $request->name;
     $usuario->email = $request->email;
     //$usuario->password = Hash::make($request->password);
-    $usuario->password = password_hash($_POST["password"],PASSWORD_DEFAULT);
+    if ($request->password != "") {
+      $usuario->password = password_hash($request->password,PASSWORD_DEFAULT);
+    }
+
 
     $usuario->save();
     return redirect('/index.php');
