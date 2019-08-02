@@ -2,18 +2,25 @@
 .info-productos{
   padding-top: 20px;
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
-  margin: 20px
-
+  margin: 20px;
+  justify-content: center;
 }
 .foto-producto{
   display: flex;
   margin-right: 20px;
   border: 1px solid black;
 }
-
 .info-producto{
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width:991px){
+  .info-productos{
+    flex-direction: column;
+  }
+  .foto-producto{
+    border: none;
+  }
 }

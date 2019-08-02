@@ -84,9 +84,7 @@ border-radius: 3%;
     width: 100%;
 
   }
-  .img-fluid{
-    margin-left: 30%;
-  }
+
   .botones{
   justify-content: space-around;
   }
@@ -94,7 +92,9 @@ border-radius: 3%;
     max-width: none;
   }
 }
-@media screen and (max-width:1024px){
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px){
 .contenedor-producto{
   display: flex;
   flex-direction: column;
@@ -105,4 +105,14 @@ border-radius: 3%;
   height: 100%;
   margin-bottom: 10px;
 }
+}
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1366px){
+  .ipad{
+    max-width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
 }
