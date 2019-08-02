@@ -31,6 +31,6 @@ class HomeController extends Controller
       $auricular = Product_tag::where('tag_id','=',3)->first();
       $auricular = Product::find($auricular->product_id);
     //  dd($mouse,$teclado,$auricular);
-        return view('index',compact('mouse','teclado','auricular'));
+        return view('/',compact('mouse','teclado','auricular'));
     }
 }
