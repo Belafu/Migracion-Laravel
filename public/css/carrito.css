@@ -1,7 +1,7 @@
 .supercontenedor{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   border-bottom: 1px solid black
 }
 
@@ -22,4 +22,8 @@
 .info-carro{
   display: flex;
   flex-direction: column;
+}
+.b-carrito{
+margin-top: 16px;
+text-align: center;
 }

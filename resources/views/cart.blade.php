@@ -8,42 +8,36 @@
 
 <div class="supercontenedor">
 @forelse ($cart as $item)
-
-
   <div class="contenedor-total">
+      <div class="foto-carro">
+          <img src="/storage/products/{{$item->featured_img}}" alt="">
+      </div>
 
-  <div class="foto-carro">
-
-    <img src="/storage/products/{{$item->featured_img}}" alt="">
-  </div>
-
-  <div class="info-carro">
-
-      <h1>{{$item->name}}</h1>
-
-      <form class="" action="/cart/{{$item->id}}" method="post">
+      <div class="info-carro">
+          <h1>{{$item->name}}</h1>
+          <form class="" action="/cart/{{$item->id}}" method="post">
           @csrf
           <p>Seleccione cuantos productos quiere</p>
           <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
           <p>Una vez seleccionada la cantidad de productos, apretar "Asegurar"</p>
           <input type="submit" name="" value="Asegurar">
-      </form>
+          </form>
+          <p>¿Quieres eliminar producto del carrito?</p>
+          <form class="butom-elminar" action="/cart/{{$item->id}}" method="post">
+              @csrf <!--Capa de seguridad Obligatoria para Laravel-->
+              {{ method_field('DELETE') }}
+              <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
+              <input type="submit" name="" value="Eliminar">
+          </form>
 
-      <p>¿Quieres eliminar producto del carrito?</p>
-      <form class="butom-elminar" action="/cart/{{$item->id}}" method="post">
-          @csrf <!--Capa de seguridad Obligatoria para Laravel-->
-          {{ method_field('DELETE') }}
-          <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
-          <input type="submit" name="" value="Eliminar">
-      </form>
-      <a href="/resumen" class="btn btn-primary ">comprar</a>
-    @empty
-      <p>No ha seleccionado nada para comprar</p>
-    @endforelse
-
+      </div>
   </div>
-
+@empty
+    <p>No ha seleccionado nada para comprar</p>
+@endforelse
 </div>
+<div class="b-carrito">
+  <a href="/resumen" class="btn btn-primary ">comprar</a>
 
 </div>
 
