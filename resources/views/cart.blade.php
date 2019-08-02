@@ -37,7 +37,7 @@
 @endforelse
 </div>
 <div class="b-carrito">
-  <a href="/resumen" class="btn btn-dark ">COMPRAR</a>
+  <a href="/resumen" class="btn btn-dark">COMPRAR</a>
 
 </div>
 
