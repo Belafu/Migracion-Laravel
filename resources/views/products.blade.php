@@ -61,10 +61,10 @@
                     @if ($carritoActual->contains($product->name))
                       <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
                     @else
-                      <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
+                      <a class="btn btn-dark " href="/product/{{$product->id}}">Ver más</a>
                     @endif
                   @else
-                    <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
+                    <a class="btn btn-dark " href="/product/{{$product->id}}">Ver más</a>
                   @endif
 
                   @if ( Auth::user()!= null)

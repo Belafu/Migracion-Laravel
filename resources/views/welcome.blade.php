@@ -15,7 +15,9 @@
   <link rel="stylesheet" href="/css/headerfooter.css">
   <link rel="stylesheet" href="/css/styleHome.css">
   <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/product.css">
   <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/carrito.css">
   <!-- Styles -->
 
 </head>

@@ -1,0 +1,25 @@
+.supercontenedor{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-bottom: 1px solid black
+}
+
+.contenedor-total{
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px
+}
+
+.foto-carro{
+  display: flex;
+  margin-right: 20px;
+  border: 1px solid black
+}
+
+.info-carro{
+  display: flex;
+  flex-direction: column;
+}
