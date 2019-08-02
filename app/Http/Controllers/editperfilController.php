@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Cart;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
 class editperfilController extends Controller
 {
+
   public function edit($id)
   {
       $usuario = User::find($id);
-      return view('editarPerfil', compact('usuario'));
+      $compras = Cart::where('status','=','1')->where('user_id','=',$id)->get();
+      return view('editarPerfil', compact('usuario','compras'));
   }
 
   public function update(Request $request, $id)
@@ -38,4 +41,5 @@ class editperfilController extends Controller
     $usuario->save();
     return redirect('/index.php');
   }
+
 }
