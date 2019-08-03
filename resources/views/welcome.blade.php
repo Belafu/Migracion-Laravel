@@ -68,7 +68,9 @@
             @csrf
           </form>
         </div>
-        <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+        <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+            <p class="contador-carrito">10</p><!--Cuando estoy logueado-->
+        </li>
       @else
         <li><a class="item" href="/products" style="margin-left:20px;">PRODUCTOS</a></li>
 
@@ -77,7 +79,9 @@
             <li><a class="item" href="{{ route('login') }}">LOGIN</a></li>
             @if (Route::has('register'))
               <li><a class="item" href="{{ route('register') }}">REGISTRO</a></li>
-              <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+              <p class="contador-carrito">7</p><!--Cuando estoy deslogueado-->
+              </li>
 
             @endif
           @endauth
@@ -116,17 +120,6 @@
               document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
 
       @else
         <div class="nav-mobile">

@@ -69,7 +69,10 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('product', compact('product'));
+        $carritoActual = Cart::where('status','=',0)->get();
+        $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
+        $yaEstaEnElCarrito = $carritoActual->contains($product->name);
+        return view('product', compact('product','yaEstaEnElCarrito'));
     }
 
     /* Show the form for editing the specified resource. */

@@ -39,13 +39,14 @@ class CartController extends Controller
      */
     public function store($id)
     {
-      //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
-        $product = Product::find($id);
-        if (Auth::user() == null) {//devuelve null si no esta logueado
-            $userLogueado = null ;
-        }else {
-          $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
-        }
+        //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
+         $product = Product::find($id);
+        // if (Auth::user() == null) {    //devuelve null si no esta logueado
+        //     $userLogueado = null ;
+        // }else {
+        //   $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
+        // }
+        $userLogueado =  Auth::user()->id;
       //  dd($userLogueado);
         $cart = new Cart;
 

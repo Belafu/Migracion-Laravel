@@ -35,5 +35,7 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        // dd("cai aqui despues de desloguearme");
+        //aqui podria eliminar los productos del carrito si estas logueado al desloguearte
     }
 }

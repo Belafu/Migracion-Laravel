@@ -4,9 +4,6 @@
 
 @section('content')
 
-
-
-
         <article class="info-productos">
 
           <div class="foto-producto">
@@ -24,8 +21,11 @@
               <input type="hidden" name="id" value="{{$product->id}}">
               {{-- <button type="submit"> borrar </button> --}}
             </form>
-
-            <a href="/product/addtocart/{{$product->id}}"><button class="btn btn-dark" type="submit" name="button">Agregar al carrito</button></a>
+              @if ($yaEstaEnElCarrito)
+                <div class="btn btn-outline-success">Ya lo tienes en el carrito</div>
+              @else
+                <a href="/product/addtocart/{{$product->id}}"><button class="btn btn-dark" type="submit" name="button">Agregar al carrito</button></a>
+              @endif
           </div>
 
         </article>
