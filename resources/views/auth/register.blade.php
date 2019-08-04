@@ -86,7 +86,7 @@
                             <label for="ciudad" class="col-md-4 col-form-label text-md-right" style="font-weight:bold">{{ __('Ciudad') }}</label>
 
                             <div class="col-md-6">
-                                <select class="ciudad" name="ciudad" value="{{ old('ciudad') }}" required>
+                                <select style="width:70%;" class="ciudad" name="ciudad" value="{{ old('ciudad') }}" required>
                                   <option value="">Elegí tu ciudad</option>
                                 </select>
                             </div>

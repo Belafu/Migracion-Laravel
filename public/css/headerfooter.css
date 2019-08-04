@@ -51,6 +51,11 @@ font-weight: bold;
   margin-top: 10px;
   font-size: 25px;
 }
+.item:hover{
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
 .contenedorMenu{
   display: flex;
   justify-content: space-around;
