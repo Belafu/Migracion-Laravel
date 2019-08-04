@@ -1,5 +1,8 @@
 <p align="center"><img src="public/images/logo-darkcode.jpg" width=400px></p>
 
+## Ir Al proyecto
+http://darkcode.dhalumnos.com
+
 ## Pasos para instalar el Proyecto
 1. Descargar el repositorio
 2. Por consola ingresar a la carpeta del repositorio.
@@ -12,6 +15,7 @@
 9. Crear las carpetas `products` y `profiles` en storage/app/public/
 10. Correr el seeder: `php artisan db:seed`.
 11. Ejecutar `php artisan serve` para iniciar el servidor web.
+12. #S7y73FJFb3pi[
 
 
 
@@ -21,23 +25,6 @@
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Se Usaron las siguientes teconologias
+<p align="center"><img src="public/images/tecnologias.png" width=400px></p>

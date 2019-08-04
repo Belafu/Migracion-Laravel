@@ -10,13 +10,13 @@
 </ol>
 <div class="carousel-inner carros">
   <div class="carousel-item active">
-    <img class="d-block w-100 " src="images/tecladoo.jpg" alt="First slide">
+    <img class="d-block w-100 " src="images/auricularr.jpg" alt="First slide">
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="images/auricularr.jpg" alt="Second slide">
+    <img class="d-block w-100" src="images/mouse.jpg" alt="Second slide">
   </div>
   <div class="carousel-item">
-    <img class="d-block w-100" src="images/mouse.jpg" alt="Third slide">
+    <img class="d-block w-100" src="images/tecladoo.jpg" alt="Third slide">
   </div>
 </div>
 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -28,12 +28,13 @@
   <span class="sr-only">Next</span>
 </a>
 </div>
-<h2 class="texto-novedades">NOVEDADES</h2>
+<div class="" style="background-color: black">
+<h2 class="texto-novedades" style="color: white;">NOVEDADES</h2>
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
     <img src="images/auriculargamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-    <h2 class="novedad">Auricular Gamer Razer </h2>
+    <h2 class="novedad" style="color: white">Auricular Gamer Razer </h2>
     <div class="botones">
       <button id="info" class="btn btn-dark btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -45,15 +46,13 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="display:flex; flex-direction: column">
+        <p>Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
-        Lorem ipsum doerunt mollit anim id est laborum.
-        Lorem ipsum doerunt mollit anim id est laborum.
-        <br>
-        Precio: $1000
-        <br>
+        Lorem ipsum doerunt mollit anim id est laborum.</p>
+        <p>$1500</p>
         <a href="/products">Ver mas productos</a>
       </div>
       <div class="modal-footer">
@@ -69,27 +68,25 @@
 <div class="novedad-uno">
   <div class="contenedor-producto">
     <img src="images/mousegamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-  <h2 class="novedad">Mouse Gamer Razer </h2>
+  <h2 class="novedad" style="color: white">Mouse Gamer Razer</h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Mouse Gamer Razer</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
+      <p>Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      <br>
-      Precio: $1000
-      <br>
+      Lorem ipsum doerunt mollit anim id est laborum.</p>
+      <p>$1500</p>
       <a href="/products">Ver mas productos</a>
     </div>
     <div class="modal-footer">
@@ -105,27 +102,25 @@
 <div class="novedad-uno">
   <div class="contenedor-producto">
   <img src="images/tecladogamer.jpg" class="img-fluid ipad" alt="Responsive image">
-  <h2 class="novedad">Teclado Gamer Razer </h2>
+  <h2 class="novedad" style="color: white">Teclado Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Teclado Gamer Razer</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
+      <p>Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      <br>
-      Precio: $1000
-      <br>
+      Lorem ipsum doerunt mollit anim id est laborum.</p>
+      <p>$1500</p>
       <a href="/products">Ver mas productos</a>
     </div>
     <div class="modal-footer">
@@ -140,12 +135,12 @@
 </div>
 </div>
 
-<h2 class="texto-novedades">LO MAS VENDIDO</h2>
+<h2 class="texto-novedades" style="color: white;">LO MAS VENDIDO</h2>
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
     <img src="images/auriculargamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-    <h2 class="novedad">Auricular Gamer Razer </h2>
+    <h2 class="novedad" style="color: white">Auricular Gamer Razer </h2>
     <div class="botones">
       <button id="info" class="btn btn-dark btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -158,14 +153,12 @@
         </button>
       </div>
       <div class="modal-body">
+        <p>Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
         Lorem ipsum doerunt mollit anim id est laborum.
-        Lorem ipsum doerunt mollit anim id est laborum.
-        Lorem ipsum doerunt mollit anim id est laborum.
-        <br>
-        Precio: $1000
-        <br>
+        Lorem ipsum doerunt mollit anim id est laborum.</p>
+        <p>$1500</p>
         <a href="/products">Ver mas productos</a>
       </div>
       <div class="modal-footer">
@@ -181,27 +174,25 @@
 <div class="novedad-uno">
   <div class="contenedor-producto">
     <img src="images/mousegamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-  <h2 class="novedad">Mouse Gamer Razer </h2>
+  <h2 class="novedad" style="color: white">Mouse Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Mouse Gamer Razer</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
+      <p>Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      <br>
-      Precio: $1000
-      <br>
+      Lorem ipsum doerunt mollit anim id est laborum.</p>
+      <p>$1500</p>
       <a href="/products">Ver mas productos</a>
     </div>
     <div class="modal-footer">
@@ -217,27 +208,25 @@
 <div class="novedad-uno">
   <div class="contenedor-producto">
   <img src="images/tecladogamer.jpg" class="img-fluid ipad" alt="Responsive image">
-  <h2 class="novedad">Teclado Gamer Razer </h2>
+  <h2 class="novedad" style="color: white">Teclado Gamer Razer </h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Teclado Gamer Razer</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
+      <p>Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
       Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      Lorem ipsum doerunt mollit anim id est laborum.
-      <br>
-      Precio: $1000
-      <br>
+      Lorem ipsum doerunt mollit anim id est laborum.</p>
+      <p>$1500</p>
       <a href="/products">Ver mas productos</a>
     </div>
     <div class="modal-footer">
@@ -251,10 +240,7 @@
 </div>
 </div>
 </div>
-
+</div>
     <marquee class="marque" style="margin-top:20px"><img class="fotos-marque" src="images/slideuno.jpeg"><img class="fotos-marque" src="images/slide2.jpg"><img class="fotos-marque" src="images/slide3.jpg"><img class="fotos-marque" src="images/slideuno.jpeg"><img class="fotos-marque" src="images/slide2.jpg"><img class="fotos-marque" src="images/slide3.jpg"> </marquee>
     <script type="text/javascript" src="js/home.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 @endsection

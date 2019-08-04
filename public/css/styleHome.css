@@ -21,7 +21,8 @@ h1{
 .contenedor-producto{
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
+  padding: 10px
 }
 .novedades{
   margin-top: 30px;
@@ -29,6 +30,7 @@ h1{
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: row;
+  padding-bottom: 10px
 }
 .imagen-x{
   display: flex;
@@ -43,9 +45,8 @@ h1{
   color: black
 }
 .novedad-uno{
-border: 2px solid grey;
-border-radius: 3%;
-
+border: 2px solid white;
+border-radius: 2%;
 }
 .mouse-novedad{
   flex-wrap: wrap;
@@ -60,7 +61,12 @@ border-radius: 3%;
   padding: 10px;
   justify-content: center
 }
-
+.novedad{
+  margin-bottom: 5px
+}
+.modal-title{
+  font-weight: bold;
+}
 @media screen and (max-width:991px){
   .novedades{
     margin-top: 30px;
@@ -84,9 +90,7 @@ border-radius: 3%;
     width: 100%;
 
   }
-  .img-fluid{
-    margin-left: 30%;
-  }
+
   .botones{
   justify-content: space-around;
   }
@@ -94,7 +98,9 @@ border-radius: 3%;
     max-width: none;
   }
 }
-@media screen and (max-width:1024px){
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px){
 .contenedor-producto{
   display: flex;
   flex-direction: column;
@@ -105,4 +111,14 @@ border-radius: 3%;
   height: 100%;
   margin-bottom: 10px;
 }
+}
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1366px){
+  .ipad{
+    max-width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
 }

@@ -4,27 +4,42 @@
 
 @section('content')
 
-<h2>Cart</h2>
-        @forelse ($cart as $item)
-          <p>{{$item->name}}</p>
-          <img src="/storage/products/{{$item->featured_img}}" alt="">
+
+
+<div class="supercontenedor">
+@forelse ($cart as $item)
+  <div class="contenedor-total">
+      <div class="foto-carro">
+          <img class="img-producto-carrito" src="/storage/products/{{$item->featured_img}}" alt="">
+      </div>
+
+      <div class="info-carro">
+          <h1>{{$item->name}}</h1>
           <form class="" action="/cart/{{$item->id}}" method="post">
-              @csrf
-              <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
-              <input type="submit" name="" value="Asegurar">
+          @csrf
+          <p>Seleccione cuantos productos quiere</p>
+          <input type="number" id="cant-product" name="cant" value="{{$item->cant}}"  min="1" max="10">
+          <p>Una vez seleccionada la cantidad de productos, apretar "Asegurar"</p>
+          <input type="submit" name="" value="Asegurar">
           </form>
-
-
+          <p>¿Quieres eliminar producto del carrito?</p>
           <form class="butom-elminar" action="/cart/{{$item->id}}" method="post">
               @csrf <!--Capa de seguridad Obligatoria para Laravel-->
               {{ method_field('DELETE') }}
               <!-- lo de arriba equivale a <input type="hidden" name="_method" value= "delete" > -->
               <input type="submit" name="" value="Eliminar">
           </form>
-        @empty
-          <p>No ha seleccionado nada para comprar</p>
-        @endforelse
-      
-<a href="/resumen" class="btn btn-primary ">comprar</a>
+
+      </div>
+  </div>
+@empty
+    <p>No ha seleccionado nada para comprar</p>
+@endforelse
+</div>
+<div class="b-carrito">
+  <a href="/resumen" class="btn btn-dark">COMPRAR</a>
+
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 @endsection

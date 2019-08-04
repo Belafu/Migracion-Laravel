@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="/css/headerfooter.css">
   <link rel="stylesheet" href="/css/styleHome.css">
   <link rel="stylesheet" href="/css/products.css">
+  <link rel="stylesheet" href="/css/product.css">
   <link rel="stylesheet" href="/css/register.css">
+  <link rel="stylesheet" href="/css/carrito.css">
+  <link rel="stylesheet" href="/css/editarPerfil.css">
   <!-- Styles -->
 
 </head>
@@ -65,7 +68,12 @@
             @csrf
           </form>
         </div>
-        <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+        <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+          @if (isset($cantidad))
+            <p class="contador-carrito">{{$cantidad}}</p><!--Cuando estoy logueado-->
+          @else
+          @endif
+        </li>
       @else
         <li><a class="item" href="/products" style="margin-left:20px;">PRODUCTOS</a></li>
 
@@ -74,7 +82,9 @@
             <li><a class="item" href="{{ route('login') }}">LOGIN</a></li>
             @if (Route::has('register'))
               <li><a class="item" href="{{ route('register') }}">REGISTRO</a></li>
-              <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a></li>
+              <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+              {{-- <p class="contador-carrito">7</p><!--Cuando estoy deslogueado--> --}}
+              </li>
 
             @endif
           @endauth
@@ -113,17 +123,6 @@
               document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
 
       @else
         <div class="nav-mobile">
@@ -190,11 +189,10 @@
       </div>
 
     </footer>
-
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pX1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <script>
     $(document).ready(function(){
        // Add smooth scrolling to all links

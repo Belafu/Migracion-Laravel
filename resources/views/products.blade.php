@@ -57,20 +57,23 @@
             <div class="botom-precio">
               <div class="precio">Precio: {{$product->price}}</div>
                 <div class="botones-producto">
-                  @if (isset($carritoActual))
+                  {{-- @if (isset($carritoActual))
                     @if ($carritoActual->contains($product->name))
                       <div class="">Ya lo tienes en el carrito</div><!--Aca puedo meter javascript-->
                     @else
-                      <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
+                      <a class="btn btn-dark " href="/product/{{$product->id}}">Ver más</a>
                     @endif
-                  @else
-                    <a class="btn btn-outline-info" href="/product/{{$product->id}}">Ver más</a>
-                  @endif
+                  @else --}}
+                    <a class="btn btn-dark " href="/product/{{$product->id}}">Ver más</a>
+                  {{-- @endif --}}
 
                   @if ( Auth::user()!= null)
                     @if (Auth::user()->rol == 1)
-                        <a class="btn btn-outline-warning" href="/product/edit/{{$product->id}}">Editar</a>
+
+                        <a class="btn btn-warning" href="/product/edit/{{$product->id}}">Editar</a>
+
                     @endif
+
                   @endif
 
                 </div>
@@ -82,5 +85,11 @@
     @endforelse
   </div>
 </div>
-<script type="text/javascript" src="js/productos.js"></script>
+@if ( Auth::user()!= null && Auth::user()->rol == 1)
+
+      <a class="btn btn-info" href="/product-add">Añadir Producto</a>
+
+@endif
+
+{{-- <script type="text/javascript" src="js/productos.js"></script> --}}
 @endsection

@@ -1,0 +1,34 @@
+.supercontenedor{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  border-bottom: 1px solid black
+}
+
+.contenedor-total{
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px
+}
+
+.foto-carro{
+  display: flex;
+  margin-right: 20px;
+  border: 1px solid black;
+  width: 350px;
+  height: 350px;
+}
+.img-producto-carrito{
+    width: 100%;
+  height: 100%;
+}
+.info-carro{
+  display: flex;
+  flex-direction: column;
+}
+.b-carrito{
+margin-top: 16px;
+text-align: center;
+}

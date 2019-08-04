@@ -74,7 +74,8 @@
   <div class="form-group row">
       <label for="tag" class="col-md-4 col-form-label text-md-right" style="font-weight:bold">{{ __('Tags') }}</label>
       <div class="col-md-6">
-        <select class="@error('tag') is-invalid @enderror" name="tag">
+        <select class="@error('tag') is-invalid @enderror" name="tag" required>
+          <option value="">Elige una categoria</option>
           @foreach ($tags as $key)
           <option value="{{$key->id}}">{{$key->name}}</option>
           @endforeach
