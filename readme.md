@@ -15,6 +15,7 @@ http://darkcode.dhalumnos.com
 9. Crear las carpetas `products` y `profiles` en storage/app/public/
 10. Correr el seeder: `php artisan db:seed`.
 11. Ejecutar `php artisan serve` para iniciar el servidor web.
+12. #S7y73FJFb3pi[
 
 
 
