@@ -19,10 +19,17 @@ class ProductController extends Controller
         $products = Product::all();
         $tags = Tag::all();
         //para desabilitar que la persona compre el mismo producto 2 veces
-        $carritoActual = Cart::where('status','=',0)->get();
-        $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
+        // $carritoActual = Cart::where('status','=',0)->get();
+        // $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
         // si $carritoActual no tiene elementos devuelve una collection vacia
-        return view('products', compact('products','tags','carritoActual'));
+        //Lo puse en la vista de cada producto
+        if (Auth::user() != null) {//si estoy logueado
+          $id = Auth::user()->id;
+          $cantidad = Cart::where('user_id','=',$id)->where('status','=', 0)->count();
+        }else {
+          $cantidad = null;
+        }
+        return view('products', compact('products','tags','cantidad'));
     }
 
     /*Muestra el formulario para crear un nuevo recurso.*/
@@ -69,10 +76,18 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        $carritoActual = Cart::where('status','=',0)->get();
-        $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
-        $yaEstaEnElCarrito = $carritoActual->contains($product->name);
-        return view('product', compact('product','yaEstaEnElCarrito'));
+        //MUDE la logica aca
+        if (Auth::user() != null) {//si estoy logueado
+          $id = Auth::user()->id;
+          $carritoActual = Cart::where('user_id','=',$id)->where('status','=', 0)->get();
+          $carritoActual = $carritoActual->map(function($elem){return $elem->name;});
+          $yaEstaEnElCarrito = $carritoActual->contains($product->name);
+          $cantidad = $carritoActual->count();
+        }else {
+          $cantidad = null;
+          $yaEstaEnElCarrito = false;
+        }
+        return view('product', compact('product','yaEstaEnElCarrito','cantidad'));
     }
 
     /* Show the form for editing the specified resource. */
@@ -147,6 +162,12 @@ class ProductController extends Controller
           $proFiltTag = $elTag->products ;
           $products = $products->intersect($proFiltTag);
         }
-        return view('products', compact('products','tags'));
+        if (Auth::user() != null) {//si estoy logueado
+          $id = Auth::user()->id;
+          $cantidad = Cart::where('user_id','=',$id)->where('status','=', 0)->count();
+        }else {
+          $cantidad = null;
+        }
+        return view('products', compact('products','tags','cantidad'));
     }
 }

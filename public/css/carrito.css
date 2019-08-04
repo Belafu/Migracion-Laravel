@@ -16,9 +16,14 @@
 .foto-carro{
   display: flex;
   margin-right: 20px;
-  border: 1px solid black
+  border: 1px solid black;
+  width: 350px;
+  height: 350px;
 }
-
+.img-producto-carrito{
+    width: 100%;
+  height: 100%;
+}
 .info-carro{
   display: flex;
   flex-direction: column;

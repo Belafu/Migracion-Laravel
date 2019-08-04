@@ -10,7 +10,7 @@
 @forelse ($cart as $item)
   <div class="contenedor-total">
       <div class="foto-carro">
-          <img src="/storage/products/{{$item->featured_img}}" alt="">
+          <img class="img-producto-carrito" src="/storage/products/{{$item->featured_img}}" alt="">
       </div>
 
       <div class="info-carro">

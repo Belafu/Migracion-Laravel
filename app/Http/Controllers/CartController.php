@@ -40,12 +40,14 @@ class CartController extends Controller
     public function store($id)
     {
         //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
-         $product = Product::find($id);
-        // if (Auth::user() == null) {    //devuelve null si no esta logueado
-        //     $userLogueado = null ;
+        if (Auth::user() == null) {    //devuelve null si no esta logueado
+             // $userLogueado = null ;
+              return redirect('/login');  
+        }
         // }else {
-        //   $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
+        //    $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
         // }
+        $product = Product::find($id);
         $userLogueado =  Auth::user()->id;
       //  dd($userLogueado);
         $cart = new Cart;
@@ -84,7 +86,13 @@ class CartController extends Controller
       }
 
         $cart = Cart::where('user_id','=',$userLogueado)->where('status','=', 0)->get();
-        return view('cart', compact('cart'));
+        if (Auth::user() != null) {//si estoy logueado
+          $id = Auth::user()->id;
+          $cantidad = Cart::where('user_id','=',$id)->where('status','=', 0)->count();
+        }else {
+          $cantidad = null;
+        }
+        return view('cart', compact('cart','cantidad'));
     }
 
     /**

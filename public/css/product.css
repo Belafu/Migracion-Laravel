@@ -10,6 +10,7 @@
   display: flex;
   margin-right: 20px;
   border: 1px solid black;
+  max-width: 320px;
 }
 .info-producto{
   display: flex;

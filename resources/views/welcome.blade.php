@@ -69,7 +69,10 @@
           </form>
         </div>
         <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
-            <p class="contador-carrito">10</p><!--Cuando estoy logueado-->
+          @if (isset($cantidad))
+            <p class="contador-carrito">{{$cantidad}}</p><!--Cuando estoy logueado-->
+          @else
+          @endif
         </li>
       @else
         <li><a class="item" href="/products" style="margin-left:20px;">PRODUCTOS</a></li>
@@ -80,7 +83,7 @@
             @if (Route::has('register'))
               <li><a class="item" href="{{ route('register') }}">REGISTRO</a></li>
               <li><a class="item" href="/cart"><i class="fas fa-shopping-cart"></i></a>
-              <p class="contador-carrito">7</p><!--Cuando estoy deslogueado-->
+              {{-- <p class="contador-carrito">7</p><!--Cuando estoy deslogueado--> --}}
               </li>
 
             @endif

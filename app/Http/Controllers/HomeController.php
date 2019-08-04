@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Product_tag;
+use App\Cart;
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -14,14 +17,10 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+      //  $this->middleware('auth');
+      //eso de arriba era un miwelar automatico que te venia
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
       $mouse = Product_tag::where('tag_id','=',1)->first();
@@ -31,6 +30,14 @@ class HomeController extends Controller
       $auricular = Product_tag::where('tag_id','=',3)->first();
       $auricular = Product::find($auricular->product_id);
     //  dd($mouse,$teclado,$auricular);
-        return view('/',compact('mouse','teclado','auricular'));
+      if (Auth::user() != null) {//si estoy logueado
+        $id = Auth::user()->id;
+        $cantidad = Cart::where('user_id','=',$id)->where('status','=', 0)->count();
+    //    dd($cantidad);
+      }else {
+        $cantidad = null;
+      }
+
+        return view('index',compact('mouse','teclado','auricular','cantidad'));
     }
 }

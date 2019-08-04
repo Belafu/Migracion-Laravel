@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-// Route::get('/', 'HomeController@index');
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/', 'HomeController@index');
 Route::get('/product-add', 'ProductController@create');
 Route::post('/product-add', 'ProductController@store');
 
@@ -25,7 +25,7 @@ Route::post('/product/edit/{id}', 'ProductController@update');
 //  /product/{id} dice que al metodo show del controlador le paso la variable id
 Route::get('/product/{id}', 'ProductController@show');
 Route::post('/product/{id}', 'ProductController@destroy');
-Route::get('/product/addtocart/{id}', 'CartController@store')->middleware('auth');
+Route::get('/product/addtocart/{id}', 'CartController@store');//->middleware('auth');
 
 Route::get('/cart', 'CartController@show');//->middleware('auth');
 Route::post('/cart/{id}', 'CartController@update');
