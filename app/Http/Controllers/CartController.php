@@ -42,7 +42,7 @@ class CartController extends Controller
         //para que agrege al carrito debo antes estar logueado,use middleware(auth) corre bien:)
         if (Auth::user() == null) {    //devuelve null si no esta logueado
              // $userLogueado = null ;
-              return redirect('/login');  
+              return redirect('/login');
         }
         // }else {
         //    $userLogueado =  Auth::user()->id; //traer usuario que esta comprando.
