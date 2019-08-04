@@ -12,9 +12,13 @@
   border: 1px solid black;
   max-width: 320px;
 }
+.img-detalle-producto{
+  width: 100%;
+}
 .info-producto{
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
 
 @media screen and (max-width:991px){
