@@ -26,4 +26,4 @@ http://darkcode.dhalumnos.com
 
 
 ## Se Usaron las siguientes teconologias
-<p align="center"><img src="http://www.enigma.uz/img/instr.png" width=400px></p>
+<p align="center"><img src="public/images/tecnologias.png" width=400px></p>
