@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
 use App\User;
 use App\Cart;
 use Illuminate\Http\Request;
@@ -13,8 +13,10 @@ class editperfilController extends Controller
 
   public function edit($id)
   {
+    
       $usuario = User::find($id);
       $compras = Cart::where('status','=','1')->where('user_id','=',$id)->get();
+
       return view('editarPerfil', compact('usuario','compras'));
   }
 
