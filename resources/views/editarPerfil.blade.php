@@ -72,7 +72,7 @@
       <p>Precio: {{$comp->price}}</p>
     </div>
     @empty
-      <h2 style="margin-top: 20px">NO HAY COMPRAS REALIZADAS</h2>
+      <h2 style="margin-top: 20px; text-align:center;">NO HAY COMPRAS REALIZADAS</h2>
 
     @endforelse
 
