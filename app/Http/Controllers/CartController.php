@@ -92,7 +92,12 @@ class CartController extends Controller
         }else {
           $cantidad = null;
         }
-        return view('cart', compact('cart','cantidad'));
+        $total = 0;
+        foreach ( $cart as $producto) {
+          $total += $producto->price * $producto->cant;
+        }
+
+        return view('cart', compact('cart','cantidad', 'total'));
     }
 
     /**

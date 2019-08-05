@@ -13,7 +13,7 @@ class editperfilController extends Controller
 
   public function edit($id)
   {
-    
+
       $usuario = User::find($id);
       $compras = Cart::where('status','=','1')->where('user_id','=',$id)->get();
 
