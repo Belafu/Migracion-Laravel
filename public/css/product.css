@@ -5,6 +5,7 @@
   flex-direction: row;
   margin: 20px;
   justify-content: center;
+  align-items: center;
 }
 .foto-producto{
   display: flex;
@@ -17,8 +18,11 @@
 }
 .info-producto{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   padding: 20px;
+  max-width: 900px;
+
 }
 
 @media screen and (max-width:991px){
