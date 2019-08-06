@@ -91,5 +91,5 @@
 
 @endif
 
-{{-- <script type="text/javascript" src="js/productos.js"></script> --}}
+<script type="text/javascript" src="js/productos.js"></script>
 @endsection

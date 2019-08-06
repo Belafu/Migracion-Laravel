@@ -1,3 +1,5 @@
+window.onload = function(){
+
 console.log("holas regsitro");
 var inputName = document.querySelector("[name=name]");
 var mensajesCorrecion = document.querySelectorAll(".errores");
@@ -72,4 +74,5 @@ selectorPais.onclick = function(){
     .catch(function(error){
       console.log(error);
     })
+  }
 }
