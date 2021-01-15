@@ -18,7 +18,7 @@ http://darkcode.dhalumnos.com
 7. **Tener Creada una base de datos** llamada `darkcode` desde MySQL/PHPMyAdmin **ósea la BD vaciá**
 8. Correr las migraciones: `php artisan migrate` esto crea las tablas en la base `darkcode`
 9. Crear las carpetas `products` y `profiles` en storage/app/public/
-10. [NO USAR] Correr el seeder: `php artisan db:seed` [Paquete abandonado]
+10. **[NO USAR]** Correr el seeder: `php artisan db:seed` **[Paquete abandonado]**
 11. Ejecutar `php artisan serve` para iniciar el servidor web. La ruta esta en la consola, puedes probar con `http://localhost:8000/`
 12. Registrar un usuario y sea con el `registro` o a mano en la BD, cambiarle el rol a (**Admin** | Osea `rol=1`) y comenzar a llenar 5 productos
 
@@ -37,14 +37,30 @@ admin@gmail.com
 
 
 
+### clever-cloud
+
+**Alternativa**, según vi en video tutorial si cambias la data del `.env` con la de la BD nueva de la nube entonces solo necesitas hacer
+
+````
+php artisan migrate
+````
+
+Para crear todas las tablas, **en la BD de la nube**
+
+Luego para modificar cosas usa este botom papa
+
+![nuve-sql](nuve-sql.png)
+
+Ahora ya te quedas trabajando en la BD online
 
 
-## Este proyecto fue echo en
+
+### Este proyecto fue echo en
 
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 
-## Se Usaron las siguientes teconologias
+### Se Usaron las siguientes teconologias
 <p align="center"><img src="public/images/tecnologias.png" width=400px></p>
