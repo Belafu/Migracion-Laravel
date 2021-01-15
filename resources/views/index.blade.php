@@ -139,15 +139,15 @@
 <div class="novedades">
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/auriculargamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-    <h2 class="novedad" style="color: white">Auricular Gamer Razer </h2>
+    <img src="images/auricular.jpeg" class="img-fluid ipad" alt="Responsive image">
+    <h2 class="novedad" style="color: white">Auricular Premium</h2>
     <div class="botones">
       <button id="info" class="btn btn-dark btn btn-primary"data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Auricular Gamer Razer</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Auricular Premium</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -173,15 +173,15 @@
 </div>
 <div class="novedad-uno">
   <div class="contenedor-producto">
-    <img src="images/mousegamer.jpeg" class="img-fluid ipad" alt="Responsive image">
-  <h2 class="novedad" style="color: white">Mouse Gamer Razer </h2>
+    <img src="images/joystick.jpg" class="img-fluid ipad" alt="Responsive image">
+  <h2 class="novedad" style="color: white">Joystick XG5</h2>
   <div class="botones">
     <button id="info" class="btn btn-dark btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" type="button" name="button">Informacion</button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 <div class="modal-dialog modal-dialog-centered" role="document">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalLongTitle">Mouse Gamer Razer</h5>
+      <h5 class="modal-title" id="exampleModalLongTitle">Joystick XG5</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>

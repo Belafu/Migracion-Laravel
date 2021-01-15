@@ -18,9 +18,9 @@ http://darkcode.dhalumnos.com
 7. **Tener Creada una base de datos** llamada `darkcode` desde MySQL/PHPMyAdmin **ósea la BD vaciá**
 8. Correr las migraciones: `php artisan migrate` esto crea las tablas en la base `darkcode`
 9. Crear las carpetas `products` y `profiles` en storage/app/public/
-10. Correr el seeder: `php artisan db:seed`.
-11. Ejecutar `php artisan serve` para iniciar el servidor web.
-12. #S7y73FJFb3pi[
+10. [NO USAR] Correr el seeder: `php artisan db:seed` [Paquete abandonado]
+11. Ejecutar `php artisan serve` para iniciar el servidor web. La ruta esta en la consola, puedes probar con `http://localhost:8000/`
+12. Registrar un usuario y sea con el `registro` o a mano en la BD, cambiarle el rol a (**Admin** | Osea `rol=1`) y comenzar a llenar 5 productos
 
 
 
