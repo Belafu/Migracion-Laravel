@@ -20,7 +20,7 @@
     <input type="file" name="featured_img" value="">
   </p>
   <p>Imagen actual</p>
-  <img src="/storage/products/{{$product->featured_img}}" alt="">
+  <img src="../../uploads/{{$product->featured_img}}" alt="">
   <p><button class="btn btn-success"type="submit">Enviar</button></p>
 
 

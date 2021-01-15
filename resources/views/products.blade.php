@@ -47,7 +47,7 @@
     @forelse ($products as $product)
         <article class="vista-producto">
           <div class="caja-imagen">
-              <img class="propia-imagen" src="/storage/products/{{$product->featured_img}}" alt="">
+              <img class="propia-imagen" src="uploads/{{$product->featured_img}}" alt="">
           </div>
           <div class="informacion-producto">
             <div class="nombre-descripcion">

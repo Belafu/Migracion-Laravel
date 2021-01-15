@@ -1,7 +1,20 @@
 <p align="center"><img src="public/images/logo-darkcode.jpg" width=400px></p>
 
-## Ir Al proyecto
-http://darkcode.dhalumnos.com
+
+
+**eCommerce** de productos tecnológicos
+
+### Ir Al proyecto
+
+https://darkcode-laravel.herokuapp.com/
+
+### Datos
+
+````javascript
+// usuario administrador
+admin@gmail.com
+123456
+````
 
 
 
@@ -53,14 +66,37 @@ Luego para modificar cosas usa este botom papa
 
 Ahora ya te quedas trabajando en la BD online
 
+<h3 align="center">BUGS RESUELTOS</h3> 
+
+Aparecieron errores a la hora de deploy en HEROKU
+
+Con las imágenes, no las mostraba esto se soluciona con un nuevo paquete `Intervention\Image` (googlear) tuve que agregar 2 líneas a `congif/app.php` y cambiar el **controlador de productos**, fijate en el código. Además de tener una carpeta `uploads` en la carpeta `publics` para guardar/acceder a las imágenes, dado que si seguía en `storage` a HEROKU le rompe y no lo muestra
+
+Luego me funciono en el local **OK** , lo subí a HEROKU y cargaba las imágenes, el problema apareció ahora en **Agregar Producto**, me salió una pantalla horrible que decía que no tenia GD o algo así
+
+La sol es la siguiente (además adjunto PDF de stackoverflow)
+
+````json
+// En composer.json agregar esa linea
+"require": {
+		...
+        "ext-gd": "*"
+},
+
+// Luego por consola
+composer update
+````
+
+Todo esto me permitió arreglar en su totalidad el proyecto :smile::smile::smile::smile:
 
 
-### Este proyecto fue echo en
+
+#### Este proyecto fue echo en
 
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 
-### Se Usaron las siguientes teconologias
+#### Se Usaron las siguientes tecnologías
 <p align="center"><img src="public/images/tecnologias.png" width=400px></p>

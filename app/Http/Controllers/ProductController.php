@@ -9,6 +9,7 @@ use App\Product_tag;
 use Illuminate\Http\Request;
 //TOMA LO SAQUE DEL AUTH
 use Illuminate\Support\Facades\Auth;
+use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller
 {
@@ -39,26 +40,42 @@ class ProductController extends Controller
         return view('productAdd',compact('tags'));
     }
 
+    // Generar random string
+    protected function random_string() {
+      $key = '';
+      $keys = array_merge( range('a','z'), range(0,9) );
+      for($i=0; $i<10; $i++) {
+         $key .= $keys[array_rand($keys)];
+      }
+      return $key;
+   }
+
     /* Almacenar un recurso recién creado en el almacenamiento*/
     public function store(Request $request)
     {
         // dd($request);
-        //Validaciones
-        //$rules = [....]
+        
+        $ruta = public_path().'/uploads/'; 
+        
+        $imagenOriginal = $request->file('featured_img');
+        // crear instancia de imagen
+        $imagen = Image::make($imagenOriginal);
+        // generar un nombre aleatorio para la imagen
+        $temp_name = $this->random_string() . '.' . $imagenOriginal->getClientOriginalExtension();
 
-        //Manejo de errores
-        //$messages = [.....]
+        // guardar imagen
+        //save( [ruta], [calidad])
+        $imagen->save($ruta . $temp_name, 100);
 
-        //$this->validate($request, $rules, $messages);
-
-        $path = $request->file('featured_img')->store('public/products');
-        $file = basename($path);
+        // CODIGO ANTIGUO
+        // $path = $request->file('featured_img')->store('/uploads');
+        // $file = basename($path);
 
         $product = new Product;
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->featured_img = $file;
+        $product->featured_img = $temp_name;//    $file
 
         $product->save();
 
