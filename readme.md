@@ -22,6 +22,21 @@ http://darkcode.dhalumnos.com
 11. Ejecutar `php artisan serve` para iniciar el servidor web. La ruta esta en la consola, puedes probar con `http://localhost:8000/`
 12. Registrar un usuario y sea con el `registro` o a mano en la BD, cambiarle el rol a (**Admin** | Osea `rol=1`) y comenzar a llenar 5 productos
 
+![butom-añadir-products](butom-añadir-products.png)
+
+<h3 align="center">DEPLOY</h3> 
+
+Para este caso usar `darkcode.sql` en el servidor de base de datos
+
+Contiene el usuario administrador
+
+````
+admin@gmail.com
+123456
+````
+
+
+
 
 
 ## Este proyecto fue echo en
