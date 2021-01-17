@@ -20,6 +20,8 @@ admin@gmail.com
 
 <h3 align="center">DEVELOPERS</h3> 
 
+Por favor usar XAMPP con PHP versión **7.5** aprox dado que de **8.0** varias paquetes no lo soportan. Me paso a la hora de querer actualizar no me corría el proyecto en local, ni actualizando el `json`
+
 ### Pasos para instalar el Proyecto
 
 1. Descargar el repositorio, de preferencia en la ruta `C:\xampp\htdocs\`
